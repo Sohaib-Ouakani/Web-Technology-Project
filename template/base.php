@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
                 <!-- LOGO -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
+                <a class="navbar-brand d-flex align-items-center" href="index.php">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
                         alt="Volume Logo" height="32" class="me-2">
                     <span class="fw-bold">VOLUME</span>
@@ -48,7 +48,7 @@
 
                         <!-- LOGIN BUTTON -->
                         <li class="nav-item">
-                            <a class="btn btn-outline-primary rounded-pill px-4" href="#">
+                            <a class="btn btn-outline-primary rounded-pill px-4" href="login.php">
                                 Login
                             </a>
                         </li>

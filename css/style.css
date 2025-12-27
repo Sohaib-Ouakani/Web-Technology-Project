@@ -6,7 +6,9 @@
 .btn-outline-primary:hover {
     color: white;
     background-color: black;
+    border-color: red; /*scegliere colori adatti*/
 }
+
 .btn-primary {
     background-color: white;
     border-color: black;

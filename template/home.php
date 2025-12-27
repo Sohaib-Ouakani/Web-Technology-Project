@@ -27,38 +27,65 @@
     <div class="row g-4">
 
       <!-- CARD 1 -->
-      <div class="col-md-4">
-        <div class="p-4 rounded" style="background:#e3f1d5;">
-          <h5 class="fw-bold">Questo piatto speciale</h5>
-          <p class="text-muted">
-            Scopri il nostro menù del giorno, con proposte sane e gustose create dal nostro chef.
-            Prenota in anticipo e assicurati il tuo pranzo preferito.
-          </p>
-          <img src="/mnt/data/signal-2025-11-20-112248_002.jpeg" class="img-fluid rounded mt-2">
+      <div class="col-md-4 d-flex">
+        <div class="p-4 rounded h-100 w-100 d-flex flex-column" style="background:#e3f1d5;">
+          <div class="flex-grow-1">
+            <p class="fw-bold fs-5 mb-2">Questo piatto speciale</p>
+            <p class="text-muted">
+              Scopri il nostro menù del giorno, con proposte sane e gustose create dal nostro chef.
+              Prenota in anticipo e assicurati il tuo pranzo preferito.
+            </p>
+          </div>
+          <div class="mb-3 text-center">
+            <button type="button" class="btn btn-danger btn-sm px-5">
+              Scopri
+            </button>
+          </div>
+          <div class="mt-auto">
+             <img src="https://www.getserveware.com/wp-content/uploads/2022/09/cosmo-green-melamine-plate-pasta.jpg" class="img-fluid rounded mt-2">
+          </div>
         </div>
       </div>
 
       <!-- CARD 2 -->
-      <div class="col-md-4">
-        <div class="p-4 rounded" style="background:#dff0e8;">
-          <h5 class="fw-bold">Un’esperienza più smart</h5>
-          <p class="text-muted">
-            Accedi con il tuo account direttamente dal sito.
-            Semplice, veloce e sostenibile — senza sprechi.
-          </p>
-          <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg" class="img-fluid rounded mt-2">
+      <div class="col-md-4 d-flex">
+        <div class="p-4 rounded h-100 w-100 d-flex flex-column" style="background:#dff0e8;">
+          <div class="flex-grow-1">
+            <p class="fw-bold fs-5 mb-2">Un’esperienza più smart</p>
+            <p class="text-muted">
+              Accedi con il tuo account direttamente dal sito.
+              Semplice, veloce e sostenibile — senza sprechi.
+            </p>
+          </div>
+          <div class="mb-3 text-center">
+            <button type="button" class="btn btn-danger btn-sm px-5">
+              Scopri
+            </button>
+          </div>
+          <div class="mt-auto">
+            <img src="https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg" class="img-fluid rounded mt-2">
+          </div>
         </div>
       </div>
 
       <!-- CARD 3 -->
-      <div class="col-md-4">
-        <div class="p-4 rounded" style="background:#e7f2fa;">
-          <h5 class="fw-bold">Ancora un motivo per venire</h5>
-          <p class="text-muted">
-            Ogni caffè servito sostiene progetti universitari e iniziative studentesche.
-            Da Volume, ogni pausa fa bene anche alla comunità.
-          </p>
-          <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg" class="img-fluid rounded mt-2">
+      <div class="col-md-4 d-flex">
+        <div class="p-4 rounded h-100 w-100 d-flex flex-column" style="background:#e7f2fa;">
+          <div class="flex-grow-1">
+            <p class="fw-bold fs-5 mb-2">Ancora un motivo per venire</p>
+            <p class="text-muted">
+              Ogni caffè servito sostiene progetti universitari e iniziative studentesche.
+              Da Volume, ogni pausa fa bene anche alla comunità.
+            </p>
+          </div>  
+          <div class="mb-3 text-center">
+            <button type="button" class="btn btn-danger btn-sm px-5">
+              Scopri
+            </button>
+          </div>
+          <div class="mt-auto">
+            <img src="https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg" class="img-fluid rounded mt-2">
+          </div>
         </div>
       </div>
 
