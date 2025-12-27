@@ -31,21 +31,18 @@
             "description" => "Scopri il nostro menù del giorno, con proposte sane e gustose create dal nostro chef.
               Prenota in anticipo e assicurati il tuo pranzo preferito.",
             "image" => "https://www.getserveware.com/wp-content/uploads/2022/09/cosmo-green-melamine-plate-pasta.jpg",
-            "buttonText" => "Scopri"
           ],
           [
             "title" => "Un’esperienza più smart",
             "description" => "Accedi con il tuo account direttamente dal sito.
               Semplice, veloce e sostenibile — senza sprechi.",
             "image" => "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg",
-            "buttonText" => "Scopri"
           ],
           [
             "title" => "Ancora un motivo per venire",
             "description" => "Ogni caffè servito sostiene progetti universitari e iniziative studentesche.
               Da Volume, ogni pausa fa bene anche alla comunità.",
             "image" => "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg",
-            "buttonText" => "Scopri"
           ]
         ]; 
       ?>
@@ -53,7 +50,6 @@
       <!-- CARDS -->
       <?php 
         foreach($items as $element):
-          $hasButton = true;
           require 'template/card.php';
         endforeach;
       ?>

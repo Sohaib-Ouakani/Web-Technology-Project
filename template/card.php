@@ -6,13 +6,6 @@
         <?php echo $element["description"]; ?>
       </p>
     </div>
-    <div class="mb-3 text-center">
-      <?php if ($hasButton): ?>
-      <button type="button" class="btn btn-danger btn-sm px-5">
-        <?php echo $element["buttonText"]; ?>
-      </button>
-      <?php endif; ?>
-    </div>
     <div class="mt-auto">
       <img src="<?php echo $element["image"]; ?>" class="img-fluid rounded mt-2">
     </div>

@@ -22,6 +22,14 @@ class DatabaseHelper
         }
     }
 
+    public function getMenuItems() {
+        $stmt = $this->db->prepare("SELECT * FROM DISH");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function resetTables(){
         // Clear existing data (optional - remove if you want to keep existing data)
         $this->db->query("DELETE FROM FOOD_ORDER");

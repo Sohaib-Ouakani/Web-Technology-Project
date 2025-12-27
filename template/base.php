@@ -35,7 +35,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-center gap-4">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="menu.php">Menu</a>
                         </li>
 
                         <li class="nav-item">

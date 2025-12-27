@@ -1,0 +1,33 @@
+<!-- ============================ HERO SECTION ============================ -->
+<section class="py-5">
+  <div class="container">
+
+    <p class="text-muted mb-1">Ammira la nostra offerta di piatti</p>
+
+    <h1 class="display-5 fw-bold mb-3">
+      Goditi il nostro Menu
+    </h1>
+
+    <hr>
+  </div>
+</section>
+
+
+
+<!-- ============================ FEATURE CARDS ============================ -->
+<section class="py-4">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- CARDS -->
+      <?php 
+        foreach($templateParams["menuItems"] as $item):
+            $element["title"] = $item["Name"]; 
+            $element["description"] = $item["Description"]; 
+            $element["image"] = "https://freepngimg.com/save/114695-mario-super-bros-png-image-high-quality/1038x719"; 
+            require 'template/card.php';
+        endforeach;
+      ?>
+    </div>
+  </div>
+</section>
