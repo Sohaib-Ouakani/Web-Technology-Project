@@ -20,20 +20,26 @@ use `volume`;
 
 create table CLIENT (
      ID char(5) not null,
-     Name varchar(10) not null,
-     Surname varchar(10) not null,
+     Name varchar(100) not null,
+     Surname varchar(100) not null,
+     Username varchar(100) not null unique,
+     Password varchar(100) not null,
+     IsAdmin BOOLEAN not null,
      constraint IDUSER primary key (ID));
 
 create table DISH (
      ID char(5) not null,
-     Name varchar(10) not null,
-     Description varchar(10) not null,
+     Name varchar(100) not null,
+     Description varchar(100) not null,
+     ImagePath varchar(100) not null,
+     Special BOOLEAN not null,
      constraint IDDISH primary key (ID));
 
 create table FOOD_ORDER (
      DISH_ID char(5) not null,
      USER_ID char(5) not null,
      OrderDate date not null,
+     IsComplete BOOLEAN not null,
      constraint IDORDER primary key (USER_ID, DISH_ID));
 
 
