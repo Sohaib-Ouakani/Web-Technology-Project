@@ -20,3 +20,11 @@
     background-color: black;
     border-color: white;
 }
+
+.bg-primary {
+    background-color: #84ACCE !important;
+}
+
+.card {
+    background-color: C5E3C1;
+}

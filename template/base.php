@@ -16,47 +16,26 @@
     ?>
 </head>
 <body>
-    <header class="border-bottom py-3">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
-            <div class="container">
-                <!-- LOGO -->
-                <a class="navbar-brand d-flex align-items-center" href="index.php">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
-                        alt="Volume Logo" height="32" class="me-2">
-                    <span class="fw-bold">VOLUME</span>
-                </a>
-
-                <!-- MOBILE TOGGLE -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- NAVIGATION LINKS -->
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav align-items-center gap-4">
-                        <li class="nav-item">
-                            <a class="nav-link" href="menu.php">Menu</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Oggi</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Chi Siamo</a>
-                        </li>
-
-                        <!-- LOGIN BUTTON -->
-                        <li class="nav-item">
-                            <a class="btn btn-outline-primary rounded-pill px-4" href="login.php">
-                                Login
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="text-center fornt-monosopace py-3 mb-4">
+        <a class="navbar-brand" href="index.php">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
+                alt="Volume Logo" height="50" class="me-2">
+            <span class="fw-bold">VOLUME</span>
+        </a>
     </header>
+
+    <div class="row mb-4"> <!-- Ogni row ha 12 colonne -->
+        <div class="col-1"></div> <!-- 1 Colonna -->
+        <nav class="col-10"> <!-- 10 Colonna -->
+            <ul class="row nav nav-pills text-center">
+                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Home</a></li>
+                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Archivio</a></li>
+                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Contatti</a></li>
+                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Login</a></li>
+            </ul>
+        </nav>
+        <div class="col-1"></div> <!-- 1 Colonna -->
+    </div>
 
     <main>
       <?php
@@ -70,52 +49,52 @@
         <div class="container">
             <div class="row justify-content-between align-items-start">
                 <!-- Brand -->
-                <div class="col-md-4 mb-4">
-                    <h4 class="fw-bold">VOLUME</h4>
+                <header class="col-md-4 mb-4">
+                    <h2 class="fw-bold">VOLUME</h2>
                     <p class="text-muted mb-0">
                         La caffetteria universitaria all'interno del campus UNIBO di Cesena
                     </p>
-                </div>
+                </header>
 
                 <!-- Right-aligned links -->
-                <div class="col-md-7">
+                <section class="col-md-7">
                     <div class="row text-md-end">
                         <!-- Features -->
-                        <div class="col-6 col-md-4 mb-4">
-                            <h6 class="fw-semibold mb-3">Features</h6>
+                        <section class="col-6 col-md-4 mb-4">
+                            <h2 class="fw-semibold mb-3">Features</h2>
                             <ul class="list-unstyled">
                                 <li><a href="#" class="text-decoration-none text-dark">Ordini online</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Menu del giorno</a></li>
                             </ul>
-                        </div>
+                        </section>
 
                         <!-- Learn More -->
-                        <div class="col-6 col-md-4 mb-4">
-                            <h6 class="fw-semibold mb-3">Learn more</h6>
+                        <section class="col-6 col-md-4 mb-4">
+                            <h2 class="fw-semibold mb-3">Learn more</h2>
                             <ul class="list-unstyled">
                                 <li><a href="#" class="text-decoration-none text-dark">Chi siamo</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Dove siamo</a></li>
                             </ul>
-                        </div>
+                        </section>
 
                         <!-- Support -->
-                        <div class="col-6 col-md-4 mb-4">
-                            <h6 class="fw-semibold mb-3">Support</h6>
+                        <section class="col-6 col-md-4 mb-4">
+                            <h2 class="fw-semibold mb-3">Support</h2>
                             <ul class="list-unstyled">
                                 <li><a href="#" class="text-decoration-none text-dark">Contattaci</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Repo</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Legal</a></li>
                             </ul>
-                        </div>
+                        </section>
                     </div>
-                </div>
+                </section>
             </div>
 
-            <hr>
+            </hr>
 
-            <div class="text-center text-muted small">
+            <footer class="text-center text-muted small">
                 © 2025 Volume — Tutti i diritti riservati
-            </div>
+            </footer>
         </div>
     </footer>
 </body>
