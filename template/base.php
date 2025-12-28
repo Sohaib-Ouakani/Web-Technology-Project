@@ -40,6 +40,8 @@
                 </ul>
             </nav>
         </div>
+
+        <main>
             <?php
                 if(isset($templateParams["nome"])){
                     require($templateParams["nome"]);
