@@ -4,13 +4,10 @@ require_once 'bootstrap.php';
 if(isset($_POST["username"]) && $_POST["password"]){
     $login_result = $dbh->checkLogin($_POST["username"], $_POST["password"]);
     if(count($login_result)==0){
-        //Login fallito
-        // $templateParams["errorelogin"] = "Errore! controllare username o password!";
-        echo "errore nel login";
+        $templateParams["errorelogin"] = "Errore! controllare username o password!";
     }
     else {
         registerLoggedUser($login_result[0]);
-        echo "login effettuato!";
     }
 }
 
@@ -23,7 +20,6 @@ if(isUserLoggedIn()) {
         $templateParams["titolo"] = "Volume - Utente";
         $templateParams["nome"] = "user-home.php";
     }
-    
 }
 else{
     $templateParams["titolo"] = "Volume-Login";
