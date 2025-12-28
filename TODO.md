@@ -1,12 +1,12 @@
 mettere a posto base.php:
-    header
-    footer deve stare in basso 
+    header ✅ 
+    footer deve stare in basso ✅ 
 
 pagine:
 
 home 
-menu 
-piatti del giorno
+menu (path nel database)
+piatti del giorno (aggiungere special flag)
 login (login sia per gli admin che per gli user)
 registrazione 
 user 

@@ -2,10 +2,10 @@
 <section class="py-5">
     <p class="text-muted mb-1">Prenota il tuo pranzo in un click</p>
 
-    <h1 class="display-5 fw-bold mb-3">
+    <h2 class="display-5 fw-bold mb-3">
       Benvenuto da Volume – la caffetteria<br>
       dell’Università di Cesena
-    </h1>
+    </h2>
 
     <p class="lead text-muted mb-4" style="max-width: 750px;">
       Da Volume puoi gustare piatti freschi e preparati al momento, perfetti per una pausa tra le lezioni o un pranzo con i colleghi.
