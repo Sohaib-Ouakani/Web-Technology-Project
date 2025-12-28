@@ -18,15 +18,20 @@
 <body>
     <div class="container">
         <header class="text-center fornt-monosopace py-3 mb-4">
-            <a class="navbar-brand" href="index.php">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
-                    alt="Volume Logo" height="50" class="me-2">
-                <span class="fw-bold">VOLUME</span>
-            </a>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <a class="navbar-brand d-flex align-items-center" href="index.php">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
+                            alt="Volume Logo" 
+                            class="logo-img me-3">
+                        <h1 class="fw-bold mb-0">VOLUME</h1>
+                    </a>
+                </div>
+            </div>
         </header>
 
-        <div class="row mb-4"> <!-- Ogni row ha 12 colonne -->
-            <nav class="col-12"> <!-- 10 Colonna -->
+        <div class="row mb-4"> 
+            <nav class="col-12"> 
                 <ul class="row nav nav-pills text-center">
                     <li class="col-6 col-md-3 nav-item p-2"><a href="menu.php" class="nav-link bg-primary text-black">Menu</a></li>
                     <li class="col-6 col-md-3 nav-item p-2"><a href="oggi.php" class="nav-link bg-primary text-black">Oggi</a></li>
@@ -46,7 +51,7 @@
       ?>
     </main>
 
-    <footer class="footer bg-light mt-5 pt-5 pb-4 border-top">
+    <footer class="footer bg-primary mt-5 pt-5 pb-4 border-top">
         <div class="container">
             <div class="row justify-content-between align-items-start">
                 <!-- Brand -->

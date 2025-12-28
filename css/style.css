@@ -26,13 +26,25 @@
 }
 
 .bg-secondary {
-    background-color: #dff0e8 !important;
-}
-
-.card {
-    background-color: C5E3C1;
+    background-color: #C5E3C1 !important;
 }
 
 body {
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+main {
+  flex: 1;
+}
+
+body > footer h2 {
+    font-size: large;
+}
+
+.logo-img {
+    width: 50px;
+    height: auto;
 }

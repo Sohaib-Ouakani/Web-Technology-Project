@@ -4,7 +4,7 @@
       
       <!-- LOGIN CARD -->
       <div class="col-12 col-md-4">
-        <div class="p-4 rounded" style="background:#e3f1d5;">
+        <div class="p-4 rounded bg-secondary">
           <h5 class="fw-bold mb-3">Login</h5>
           
           <form action="#" method="POST">
