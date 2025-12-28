@@ -40,16 +40,16 @@
                 </ul>
             </nav>
         </div>
+            <?php
+                if(isset($templateParams["nome"])){
+                    require($templateParams["nome"]);
+                }   
+            ?>
+        </main>
     </div>
     
 
-    <main>
-      <?php
-        if(isset($templateParams["nome"])){
-          require($templateParams["nome"]);
-        }
-      ?>
-    </main>
+    
 
     <footer class="footer bg-primary mt-5 pt-5 pb-4 border-top">
         <div class="container">
@@ -69,8 +69,8 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Features</h2>
                             <ul class="list-unstyled">
-                                <li><a href="order.php" class="text-decoration-none text-dark">Ordini online</a></li>
-                                <li><a href="menu.php" class="text-decoration-none text-dark">Menu del giorno</a></li>
+                                <li><a href="order.php" class="text-dark">Ordini online</a></li>
+                                <li><a href="menu.php" class="text-dark">Menu del giorno</a></li>
                             </ul>
                         </section>
 
@@ -78,8 +78,8 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Learn more</h2>
                             <ul class="list-unstyled">
-                                <li><a href="info.php" class="text-decoration-none text-dark">Chi siamo</a></li>
-                                <li><a href="https://maps.app.goo.gl/C2M3G2Hvx2KVeAJ29" class="text-decoration-none text-dark">Dove siamo</a></li>
+                                <li><a href="info.php" class="text-dark">Chi siamo</a></li>
+                                <li><a href="https://maps.app.goo.gl/C2M3G2Hvx2KVeAJ29" class="text-dark">Dove siamo</a></li>
                             </ul>
                         </section>
 
@@ -87,9 +87,9 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Support</h2>
                             <ul class="list-unstyled">
-                                <li><a href="info.php" class="text-decoration-none text-dark">Contattaci</a></li>
-                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project" class="text-decoration-none text-dark">Repo</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Legal</a></li>
+                                <li><a href="info.php" class="text-dark">Contattaci</a></li>
+                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project" class="text-dark">Repo</a></li>
+                                <li><a href="#" class="text-dark">Legal</a></li>
                             </ul>
                         </section>
                     </div>

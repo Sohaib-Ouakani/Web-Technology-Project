@@ -1,7 +1,5 @@
 <!-- ============================ HERO SECTION ============================ -->
 <section class="py-5">
-  <div class="container">
-
     <p class="text-muted mb-1">Ammira la nostra offerta di piatti</p>
 
     <h1 class="display-5 fw-bold mb-3">
@@ -9,14 +7,12 @@
     </h1>
 
     <hr>
-  </div>
 </section>
 
 
 
 <!-- ============================ FEATURE CARDS ============================ -->
 <section class="py-4">
-  <div class="container">
     <div class="row g-4">
 
       <!-- CARDS -->
@@ -29,5 +25,4 @@
         endforeach;
       ?>
     </div>
-  </div>
 </section>
