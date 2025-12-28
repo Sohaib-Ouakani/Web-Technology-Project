@@ -16,26 +16,27 @@
     ?>
 </head>
 <body>
-    <header class="text-center fornt-monosopace py-3 mb-4">
-        <a class="navbar-brand" href="index.php">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
-                alt="Volume Logo" height="50" class="me-2">
-            <span class="fw-bold">VOLUME</span>
-        </a>
-    </header>
+    <div class="container">
+        <header class="text-center fornt-monosopace py-3 mb-4">
+            <a class="navbar-brand" href="index.php">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
+                    alt="Volume Logo" height="50" class="me-2">
+                <span class="fw-bold">VOLUME</span>
+            </a>
+        </header>
 
-    <div class="row mb-4"> <!-- Ogni row ha 12 colonne -->
-        <div class="col-1"></div> <!-- 1 Colonna -->
-        <nav class="col-10"> <!-- 10 Colonna -->
-            <ul class="row nav nav-pills text-center">
-                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Home</a></li>
-                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Archivio</a></li>
-                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Contatti</a></li>
-                <li class="col-6 col-md-3 nav-item p-2"><a href="#" class="nav-link bg-primary text-black">Login</a></li>
-            </ul>
-        </nav>
-        <div class="col-1"></div> <!-- 1 Colonna -->
+        <div class="row mb-4"> <!-- Ogni row ha 12 colonne -->
+            <nav class="col-12"> <!-- 10 Colonna -->
+                <ul class="row nav nav-pills text-center">
+                    <li class="col-6 col-md-3 nav-item p-2"><a href="menu.php" class="nav-link bg-primary text-black">Menu</a></li>
+                    <li class="col-6 col-md-3 nav-item p-2"><a href="oggi.php" class="nav-link bg-primary text-black">Oggi</a></li>
+                    <li class="col-6 col-md-3 nav-item p-2"><a href="info.php" class="nav-link bg-primary text-black">Chi Siamo</a></li>
+                    <li class="col-6 col-md-3 nav-item p-2"><a href="login.php" class="nav-link bg-primary text-black">Login</a></li>
+                </ul>
+            </nav>
+        </div>
     </div>
+    
 
     <main>
       <?php
@@ -45,7 +46,7 @@
       ?>
     </main>
 
-    <footer class="bg-light mt-5 pt-5 pb-4 border-top">
+    <footer class="footer bg-light mt-5 pt-5 pb-4 border-top">
         <div class="container">
             <div class="row justify-content-between align-items-start">
                 <!-- Brand -->
@@ -63,8 +64,8 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Features</h2>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="text-decoration-none text-dark">Ordini online</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Menu del giorno</a></li>
+                                <li><a href="order.php" class="text-decoration-none text-dark">Ordini online</a></li>
+                                <li><a href="menu.php" class="text-decoration-none text-dark">Menu del giorno</a></li>
                             </ul>
                         </section>
 
@@ -72,8 +73,8 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Learn more</h2>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="text-decoration-none text-dark">Chi siamo</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Dove siamo</a></li>
+                                <li><a href="info.php" class="text-decoration-none text-dark">Chi siamo</a></li>
+                                <li><a href="https://maps.app.goo.gl/C2M3G2Hvx2KVeAJ29" class="text-decoration-none text-dark">Dove siamo</a></li>
                             </ul>
                         </section>
 
@@ -81,8 +82,8 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Support</h2>
                             <ul class="list-unstyled">
-                                <li><a href="#" class="text-decoration-none text-dark">Contattaci</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Repo</a></li>
+                                <li><a href="info.php" class="text-decoration-none text-dark">Contattaci</a></li>
+                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project" class="text-decoration-none text-dark">Repo</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Legal</a></li>
                             </ul>
                         </section>

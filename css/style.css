@@ -25,6 +25,14 @@
     background-color: #84ACCE !important;
 }
 
+.bg-secondary {
+    background-color: #dff0e8 !important;
+}
+
 .card {
     background-color: C5E3C1;
+}
+
+body {
+    min-height: 100vh;
 }
