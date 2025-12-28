@@ -3,9 +3,19 @@
     <header>
       <p class="fw-bold fs-5 mb-2"><?php echo $element["title"]; ?></p>
     </header>
-      <p class="text-muted">
-        <?php echo $element["description"]; ?>
-      </p>
+
+    <?php if(isset($element["date"])): ?>
+    <p><?php echo $element["date"]; ?></p>
+    <?php endif; ?>
+
+    <?php if(isset($element["iscomplete"])): ?>
+    <p><?= $element["iscomplete"] == 0 ? "In processo" : "Completato" ?></p>
+    <?php endif; ?>
+
+    <p class="text-muted">
+      <?php echo $element["description"]; ?>
+    </p>
+
     <div class="mt-auto">
       <img src="<?php echo $element["image"]; ?>" class="img-fluid rounded mt-2">
     </div>
