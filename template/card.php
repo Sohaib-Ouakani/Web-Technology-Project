@@ -4,12 +4,18 @@
       <p class="fw-bold fs-5 mb-2"><?php echo $element["title"]; ?></p>
     </header>
 
-    <?php if(isset($element["date"])): ?>
+    <?php if(isset($element["isfoodoredercard"]) && $element["isfoodoredercard"] == true): ?>
     <p>Prenotato per: <?php echo $element["date"]; ?></p>
-    <?php endif; ?>
-
-    <?php if(isset($element["iscomplete"])): ?>
     <p>Stato: <?= $element["iscomplete"] == 0 ? "In processo" : "Completato" ?></p>
+    <p>
+      Operazioni:
+      <a class="text-dark" 
+        href="manage-order.php?action=2&id=<?php echo $element["dishid"]; ?>" 
+        aria-label="Modifica ordine per <?php echo htmlspecialchars($element["title"]);?>">Modifica</a>
+      <a class="text-dark" 
+        href="manage-order.php?action=3&id=<?php echo $element["dishid"]; ?>"  
+        aria-label="Cancella ordine per <?php echo htmlspecialchars($element["title"]);?>">Cancella</a>
+    </p>
     <?php endif; ?>
 
     <p class="text-muted">
@@ -18,7 +24,9 @@
 
     <div class="mt-auto">
       <div class="ratio ratio-16x9">
-        <img src="<?php echo UPLOAD_DIR.$element["image"]; ?>" class="object-fit-cover rounded mt-2">
+        <img src="<?php echo UPLOAD_DIR.$element["image"]; ?>" 
+          alt="<?php echo $element["title"]; ?>"
+          class="object-fit-cover rounded mt-2">
       </div>
     </div>
   </article>

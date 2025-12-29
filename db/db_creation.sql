@@ -1,17 +1,7 @@
 -- *********************************************
--- * SQL MySQL generation
--- *--------------------------------------------
--- * DB-MAIN version: 11.0.2
--- * Generator date: Sep 14 2021
--- * Generation date: Sat Dec 27 13:58:11 2025
--- * LUN file:
--- * Schema: Schema1/1
+-- * SQL MySQL generation (CORRECTED)
 -- *********************************************
 
-
--- Database Section
--- ________________
---
 create schema if not exists `volume` default character set utf8;
 use `volume`;
 
@@ -19,7 +9,7 @@ use `volume`;
 -- _____________
 
 create table CLIENT (
-     ID char(5) not null,
+     ID int auto_increment,
      Name varchar(100) not null,
      Surname varchar(100) not null,
      Username varchar(100) not null unique,
@@ -28,7 +18,7 @@ create table CLIENT (
      constraint IDUSER primary key (ID));
 
 create table DISH (
-     ID char(5) not null,
+     ID int auto_increment,
      Name varchar(100) not null,
      Description varchar(100) not null,
      ImagePath varchar(100) not null,
@@ -36,24 +26,32 @@ create table DISH (
      constraint IDDISH primary key (ID));
 
 create table FOOD_ORDER (
-     DISH_ID char(5) not null,
-     USER_ID char(5) not null,
+     ID int auto_increment,
+     DISH_ID int not null,
+     USER_ID int not null,
      OrderDate datetime not null,
      IsComplete BOOLEAN not null,
-     constraint IDORDER primary key (USER_ID, DISH_ID, OrderDate));
-
+     constraint IDORDER primary key (ID),
+     constraint UQ_ORDER unique (USER_ID, DISH_ID, OrderDate));
 
 -- Constraints Section
 -- ___________________
 
 alter table FOOD_ORDER add constraint FKR
      foreign key (USER_ID)
-     references CLIENT (ID);
+     references CLIENT (ID)
+     on delete cascade
+     on update cascade;
 
 alter table FOOD_ORDER add constraint FKR_1
      foreign key (DISH_ID)
-     references DISH (ID);
+     references DISH (ID)
+     on delete cascade
+     on update cascade;
 
-
--- Index Section
+-- Index Section (optional but recommended for performance)
 -- _____________
+
+create index IDX_ORDER_USER on FOOD_ORDER (USER_ID);
+create index IDX_ORDER_DISH on FOOD_ORDER (DISH_ID);
+create index IDX_ORDER_DATE on FOOD_ORDER (OrderDate);

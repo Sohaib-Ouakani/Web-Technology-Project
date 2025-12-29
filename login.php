@@ -19,6 +19,7 @@ if(isUserLoggedIn()) {
     } else {
         $templateParams["titolo"] = "Volume - Utente";
         $templateParams["nome"] = "user-home.php";
+        $templateParams["orders"] = $dbh->getFoodOrderByClientId($_SESSION["id"]);
     }
 }
 else{
