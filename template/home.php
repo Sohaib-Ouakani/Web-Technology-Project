@@ -26,25 +26,25 @@
             "title" => "Questo piatto speciale",
             "description" => "Scopri il nostro menù del giorno, con proposte sane e gustose create dal nostro chef.
               Prenota in anticipo e assicurati il tuo pranzo preferito.",
-            "image" => "https://www.getserveware.com/wp-content/uploads/2022/09/cosmo-green-melamine-plate-pasta.jpg",
+            "image" => "home_first.jpg",
           ],
           [
             "title" => "Un’esperienza più smart",
             "description" => "Accedi con il tuo account direttamente dal sito.
               Semplice, veloce e sostenibile — senza sprechi.",
-            "image" => "https://images.pexels.com/photos/3182773/pexels-photo-3182773.jpeg",
+            "image" => "home_second.jpeg",
           ],
           [
             "title" => "Ancora un motivo per venire",
             "description" => "Ogni caffè servito sostiene progetti universitari e iniziative studentesche.
               Da Volume, ogni pausa fa bene anche alla comunità.",
-            "image" => "https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg",
+            "image" => "home_third.jpeg",
           ]
         ]; 
       ?>
 
       <!-- CARDS -->
-      <?php 
+      <?php
         foreach($items as $element):
           require 'template/card.php';
         endforeach;

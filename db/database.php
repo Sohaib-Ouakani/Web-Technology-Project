@@ -83,9 +83,9 @@ class DatabaseHelper
             ['D0004', 'Tiramisu', 'Dessert', 'tiramisu.webp', 0],
             ['D0005', 'Risotto', 'Seafood', 'risotto.jpg', 1],
             ['D0006', 'Bruschetta', 'Appetizer', 'bruschetta.webp', 0],
-            ['D0007', 'Osso Buco', 'Special', 'ossobuco.jpeg', 1],
-            ['D0008', 'Panna Cotta', 'Dessert', 'pannacotta.jpeg', 0],
-            ['D0009', 'Ravioli', 'Stuffed', 'ravioli.jpeg', 0],
+            ['D0007', 'Osso Buco', 'Special', 'ossobuco.jpg', 1],
+            ['D0008', 'Panna Cotta', 'Dessert', 'pannacotta.webp', 0],
+            ['D0009', 'Tortelli', 'Goated', 'tortelli.webp', 0],
             ['D0010', 'Saltimbocca', 'Veal dish', 'saltimbocca.jpg', 1]
         ];
         

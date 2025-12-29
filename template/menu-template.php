@@ -20,7 +20,7 @@
         foreach($templateParams["menuItems"] as $item):
             $element["title"] = $item["Name"]; 
             $element["description"] = $item["Description"]; 
-            $element["image"] = "https://freepngimg.com/save/114695-mario-super-bros-png-image-high-quality/1038x719"; 
+            $element["image"] = $item["ImagePath"]; 
             require 'template/card.php';
         endforeach;
       ?>
