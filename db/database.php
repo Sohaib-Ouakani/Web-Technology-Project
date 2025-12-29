@@ -41,7 +41,7 @@ class DatabaseHelper
     } 
 
     public function getFoodOrderByClientId($clientid) {
-        $query = "SELECT name, description, imagepath, orderdate, iscomplete FROM FOOD_ORDER JOIN DISH ON dish_id = id WHERE user_id = ?";
+        $query = "SELECT name, description, imagepath, orderdate, iscomplete FROM FOOD_ORDER JOIN DISH ON dish_id = id WHERE user_id = ? ORDER BY iscomplete";
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('s', $clientid);
         $stmt->execute();
@@ -77,16 +77,16 @@ class DatabaseHelper
         
         // Insert sample dishes
         $dishes = [
-            ['D0001', 'Margherita', 'Classic', '/images/margherita.jpg', 0],
-            ['D0002', 'Carbonara', 'Creamy', '/images/carbonara.jpg', 0],
-            ['D0003', 'Lasagna', 'Layered', '/images/lasagna.jpg', 0],
-            ['D0004', 'Tiramisu', 'Dessert', '/images/tiramisu.jpg', 0],
-            ['D0005', 'Risotto', 'Seafood', '/images/risotto.jpg', 1],
-            ['D0006', 'Bruschetta', 'Appetizer', '/images/bruschetta.jpg', 0],
-            ['D0007', 'Osso Buco', 'Special', '/images/ossobuco.jpg', 1],
-            ['D0008', 'Panna Cotta', 'Dessert', '/images/pannacotta.jpg', 0],
-            ['D0009', 'Ravioli', 'Stuffed', '/images/ravioli.jpg', 0],
-            ['D0010', 'Saltimbocca', 'Veal dish', '/images/saltimbocca.jpg', 1]
+            ['D0001', 'Margherita', 'Classic', 'margherita.jpeg', 0],
+            ['D0002', 'Carbonara', 'Creamy', 'carbonara.jpg', 0],
+            ['D0003', 'Lasagna', 'Layered', 'lasagna.jpeg', 0],
+            ['D0004', 'Tiramisu', 'Dessert', 'tiramisu.webp', 0],
+            ['D0005', 'Risotto', 'Seafood', 'risotto.jpg', 1],
+            ['D0006', 'Bruschetta', 'Appetizer', 'bruschetta.webp', 0],
+            ['D0007', 'Osso Buco', 'Special', 'ossobuco.jpeg', 1],
+            ['D0008', 'Panna Cotta', 'Dessert', 'pannacotta.jpeg', 0],
+            ['D0009', 'Ravioli', 'Stuffed', 'ravioli.jpeg', 0],
+            ['D0010', 'Saltimbocca', 'Veal dish', 'saltimbocca.jpg', 1]
         ];
         
         $stmt = $this->db->prepare("INSERT INTO DISH (ID, Name, Description, ImagePath, Special) VALUES (?, ?, ?, ?, ?)");
@@ -98,20 +98,22 @@ class DatabaseHelper
         
         // Insert sample orders
         $orders = [
-            ['D0001', 'C0001', '2025-12-20', 1],
-            ['D0002', 'C0001', '2025-12-22', 1],
-            ['D0003', 'C0002', '2025-12-21', 1],
-            ['D0004', 'C0002', '2025-12-23', 0],
-            ['D0005', 'C0003', '2025-12-24', 0],
-            ['D0006', 'C0003', '2025-12-25', 1],
-            ['D0001', 'C0004', '2025-12-26', 0],
-            ['D0007', 'C0004', '2025-12-27', 0],
-            ['D0008', 'C0006', '2025-12-20', 1],
-            ['D0009', 'C0006', '2025-12-26', 0],
-            ['D0010', 'C0007', '2025-12-25', 1],
-            ['D0001', 'C0007', '2025-12-27', 0],
-            ['D0005', 'C0008', '2025-12-23', 1],
-            ['D0006', 'C0008', '2025-12-27', 0]
+            ['D0001', 'C0001', '2025-12-20 10:30:00', 1],
+            ['D0002', 'C0001', '2025-12-10 14:15:00', 0],
+            ['D0003', 'C0001', '2025-12-12 09:45:00', 1],
+            ['D0004', 'C0001', '2025-12-30 16:20:00', 0],
+            ['D0005', 'C0001', '2025-12-20 11:00:00', 1],
+            ['D0006', 'C0001', '2025-12-20 11:30:00', 1],
+            ['D0003', 'C0002', '2025-12-21 13:00:00', 1],
+            ['D0004', 'C0002', '2025-12-23 12:45:00', 0],
+            ['D0005', 'C0003', '2025-12-24 15:30:00', 0],
+            ['D0006', 'C0003', '2025-12-25 18:00:00', 1],
+            ['D0007', 'C0004', '2025-12-27 10:15:00', 0],
+            ['D0008', 'C0006', '2025-12-20 14:30:00', 1],
+            ['D0009', 'C0006', '2025-12-26 11:45:00', 0],
+            ['D0010', 'C0007', '2025-12-25 19:30:00', 1],
+            ['D0005', 'C0008', '2025-12-23 13:20:00', 1],
+            ['D0006', 'C0008', '2025-12-27 16:00:00', 0]
         ];
         
         $stmt = $this->db->prepare("INSERT INTO FOOD_ORDER (DISH_ID, USER_ID, OrderDate, IsComplete) VALUES (?, ?, ?, ?)");

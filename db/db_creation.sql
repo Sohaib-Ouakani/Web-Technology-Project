@@ -38,9 +38,9 @@ create table DISH (
 create table FOOD_ORDER (
      DISH_ID char(5) not null,
      USER_ID char(5) not null,
-     OrderDate date not null,
+     OrderDate datetime not null,
      IsComplete BOOLEAN not null,
-     constraint IDORDER primary key (USER_ID, DISH_ID));
+     constraint IDORDER primary key (USER_ID, DISH_ID, OrderDate));
 
 
 -- Constraints Section

@@ -5,11 +5,11 @@
     </header>
 
     <?php if(isset($element["date"])): ?>
-    <p><?php echo $element["date"]; ?></p>
+    <p>Prenotato per: <?php echo $element["date"]; ?></p>
     <?php endif; ?>
 
     <?php if(isset($element["iscomplete"])): ?>
-    <p><?= $element["iscomplete"] == 0 ? "In processo" : "Completato" ?></p>
+    <p>Stato: <?= $element["iscomplete"] == 0 ? "In processo" : "Completato" ?></p>
     <?php endif; ?>
 
     <p class="text-muted">
@@ -17,7 +17,9 @@
     </p>
 
     <div class="mt-auto">
-      <img src="<?php echo $element["image"]; ?>" class="img-fluid rounded mt-2">
+      <div class="ratio ratio-16x9">
+        <img src="<?php echo UPLOAD_DIR.$element["image"]; ?>" class="object-fit-cover rounded mt-2">
+      </div>
     </div>
   </article>
 </div>
