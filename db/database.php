@@ -63,6 +63,21 @@ class DatabaseHelper
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getOrderByOrderIdAndClient($orderid, $clientid) {
+        $query = "
+            SELECT *
+            FROM FOOD_ORDER
+            WHERE 
+                FOOD_ORDER.id = ? AND
+                FOOD_ORDER.USER_ID = ?";
+        
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii', $orderid, $clientid);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function resetTables(){
         // Clear existing data (order matters due to foreign keys)
         $this->db->query("DELETE FROM FOOD_ORDER");
