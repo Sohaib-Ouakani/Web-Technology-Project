@@ -1,7 +1,10 @@
 <?php
 require_once 'bootstrap.php';
 
-if(!isUserLoggedIn() || !isset($_GET["action"]) || ($_GET["action"]!=1 && $_GET["action"]!=2 && $_GET["action"]!=3) || ($_GET["action"]!=1 && !isset($_GET["id"]))){
+if(!isUserLoggedIn() 
+    || !isset($_GET["action"]) 
+    || ($_GET["action"]!=1 && $_GET["action"]!=2 && $_GET["action"]!=3) 
+    || ($_GET["action"]!=1 && !isset($_GET["id"]))){
     header("location: login.php");
 }
 
@@ -17,7 +20,7 @@ if ($_GET["action"] != 1) {
 }
 
 //Base Template
-$templateParams["titolo"] = "Volume - Nuovo ordine";
+$templateParams["titolo"] = "Volume - Gestisci ordine";
 $templateParams["nome"] = "user-form.php";
 
 $templateParams["menu"] = $dbh->getMenuItems();

@@ -8,16 +8,19 @@
     <p>Prenotato per: <?php echo $element["date"]; ?></p>
     <p>Stato: <?= $element["iscomplete"] == 0 ? "In processo" : "Completato" ?></p>
     <p>
+    <?php if($element["iscomplete"] == false): ?>
       Operazioni:
       <a class="text-dark" 
-        href="manage-order.php?action=2&id=<?php echo $element["dishid"]; ?>" 
+        href="manage-order.php?action=2&id=<?php echo $element["orderid"]; ?>" 
         aria-label="Modifica ordine per <?php echo htmlspecialchars($element["title"]);?>">Modifica</a>
       <a class="text-dark" 
-        href="manage-order.php?action=3&id=<?php echo $element["dishid"]; ?>"  
+        href="manage-order.php?action=3&id=<?php echo $element["orderid"]; ?>"  
         aria-label="Cancella ordine per <?php echo htmlspecialchars($element["title"]);?>">Cancella</a>
-    </p>
+    <?php else: ?>
+      Operazioni:  
+    <?php endif; ?>  
     <?php endif; ?>
-
+    </p>
     <p class="text-muted">
       <?php echo $element["description"]; ?>
     </p>

@@ -14,8 +14,6 @@ function registerLoggedUser($user) {
 function getEmptyOrder() {
     return array(
         "DISH_ID" => "", 
-        "titoloarticolo" => "", 
-        "USER_ID" => "", 
         "OrderDate" => "", 
     );
 }

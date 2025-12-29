@@ -78,6 +78,15 @@ class DatabaseHelper
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function insertOrder($dishid, $userid, $orderdate){
+        $query = "INSERT INTO FOOD_ORDER (dish_id, user_id, OrderDate, IsComplete) VALUES (?, ?, ?, false)";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iis', $dishid, $userid, $orderdate);
+        $stmt->execute();
+        
+        return $stmt->insert_id;
+    }
+
     public function resetTables(){
         // Clear existing data (order matters due to foreign keys)
         $this->db->query("DELETE FROM FOOD_ORDER");
