@@ -21,31 +21,8 @@
 <!-- ============================ FEATURE CARDS ============================ -->
 <section class="py-4">
     <div class="row g-4">
-      <?php $items = [
-          [
-            "title" => "Questo piatto speciale",
-            "description" => "Scopri il nostro menù del giorno, con proposte sane e gustose create dal nostro chef.
-              Prenota in anticipo e assicurati il tuo pranzo preferito.",
-            "image" => "home_first.jpg",
-          ],
-          [
-            "title" => "Un’esperienza più smart",
-            "description" => "Accedi con il tuo account direttamente dal sito.
-              Semplice, veloce e sostenibile — senza sprechi.",
-            "image" => "home_second.jpeg",
-          ],
-          [
-            "title" => "Ancora un motivo per venire",
-            "description" => "Ogni caffè servito sostiene progetti universitari e iniziative studentesche.
-              Da Volume, ogni pausa fa bene anche alla comunità.",
-            "image" => "home_third.jpeg",
-          ]
-        ]; 
-      ?>
-
-      <!-- CARDS -->
       <?php
-        foreach($items as $element):
+        foreach($templateParams['cards'] as $element):
           require 'template/card.php';
         endforeach;
       ?>
