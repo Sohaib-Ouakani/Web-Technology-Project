@@ -17,7 +17,7 @@
 </head>
 <body>
     <div class="container">
-        <header class="text-center fornt-monosopace py-3 mb-4">
+        <header class="text-center fornt-monosopace py-3">
             <div class="row justify-content-center">
                 <div class="col-auto">
                     <a class="navbar-brand d-flex align-items-center" href="index.php">
@@ -30,13 +30,13 @@
             </div>
         </header>
 
-        <div class="row mb-4"> 
+        <div class="row"> 
             <nav class="col-12"> 
                 <ul class="row nav nav-pills text-center">
                     <li class="col-6 col-md-3 nav-item p-2"><a href="menu.php" class="nav-link bg-primary text-black">Menu</a></li>
                     <li class="col-6 col-md-3 nav-item p-2"><a href="oggi.php" class="nav-link bg-primary text-black">Oggi</a></li>
                     <li class="col-6 col-md-3 nav-item p-2"><a href="info.php" class="nav-link bg-primary text-black">Chi Siamo</a></li>
-                    <li class="col-6 col-md-3 nav-item p-2"><a href="login.php" class="nav-link bg-primary text-black">Login</a></li>
+                    <li class="col-6 col-md-3 nav-item p-2"><a href="login.php" class="nav-link bg-primary text-black"><?php if (isUserLoggedIn()) echo "Area personale"; else echo "Login"; ?></a></li>
                 </ul>
             </nav>
         </div>
