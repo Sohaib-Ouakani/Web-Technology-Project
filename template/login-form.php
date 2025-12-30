@@ -22,8 +22,9 @@
             </div>
 
             <p>Non sei registrato? <a href="registration.php">Registrati</a></p>
-            <button type="submit" class="btn btn-primary w-100">Invia</button>
-
+            <div class="d-grid gap-2">
+              <input type="submit" class="btn btn-primary btn-lg" value="Invia">
+            </div>
           </form>
         </div>
       </div>
