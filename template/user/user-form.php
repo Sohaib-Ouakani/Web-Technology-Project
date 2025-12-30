@@ -3,7 +3,7 @@
     $action = getActionText($templateParams["action"])
 ?>
 
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-3">
     <div class="col-12 col-md-4">
         <form action="process-order.php" method="post" class="bg-secondary rounded p-4">
             <h2 class="fw-bold">Gestisci Ordine</h2>
