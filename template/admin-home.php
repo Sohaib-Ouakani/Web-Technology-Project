@@ -1,32 +1,53 @@
 <section class="py-4">
-    <h2>Ciao, <?php echo $_SESSION["name"]; echo " "; echo $_SESSION["surname"];  ?> (Admin)</h2>
+  <h2>Ciao, <?php echo $_SESSION["name"]; echo " "; echo $_SESSION["surname"];  ?> (Admin)</h2>
 
-    <div class="row g-4">
-      <?php $items = [
-          [
-            "title" => "Guarda gli ordnini",
-            "description" => "gardo gay",
-            "image" => "./upload/IMG_4558.jpg",
-          ],
-          [
-            "title" => "Un’esperienza più ROSSI",
-            "description" => "cloe è molto bella",
-            "image" => "./upload/IMG_4558.jpg",
-          ],
-          [
-            "title" => "Ancora un motivo per venire",
-            "description" => "Non c'è",
-            "image" => "./upload/IMG_4558.jpg",
-          ]
-        ]; 
-      ?>
+  <div class="row pt-4">
+    <div class="col-12 col-md-4 d-flex">
+      <a href="admin-gestisci-prenotazioni.php" class="p-4 rounded h-100 w-100 d-flex flex-column bg-secondary text-dark">
+        <header>
+          <p class="fw-bold fs-5 mb-2">Gestisci Prenotazioni</p>
+        </header>
 
-      <!-- CARDS -->
-      <?php 
-        foreach($items as $element):
-          require 'template/card.php';
-        endforeach;
-      ?>
+        <div class="mt-auto">
+          <div class="ratio ratio-16x9">
+            <img src="./upload/IMG_4558.jpg" 
+              alt=""
+              class="object-fit-cover rounded mt-2">
+          </div>
+        </div>
+      </a>
     </div>
-    
+
+    <div class="col-12 col-md-4 d-flex">
+      <a href="admin-gestisci-clienti.php" class="text-dark p-4 rounded h-100 w-100 d-flex flex-column bg-secondary">
+        <header>
+          <p class="fw-bold fs-5 mb-2m">Gestisci Clienti</p>
+        </header>
+
+        <div class="mt-auto">
+          <div class="ratio ratio-16x9">
+            <img src="./upload/IMG_4558.jpg" 
+              alt=""
+              class="object-fit-cover rounded mt-2">
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="col-12 col-md-4 d-flex">
+      <a href="admin-gestisci-piatti.php" class="text-dark p-4 rounded h-100 w-100 d-flex flex-column bg-secondary">
+        <header>
+          <p class="fw-bold fs-5 mb-2">Gestisci Piatti</p>
+        </header>
+
+        <div class="mt-auto">
+          <div class="ratio ratio-16x9">
+            <img src="./upload/IMG_4558.jpg" 
+              alt=""
+              class="object-fit-cover rounded mt-2">
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 </section>
