@@ -35,14 +35,14 @@
                     name="datetime" 
                     id="datetime" 
                     class="form-control" 
-                    value="<?= $order['OrderDate'] ?? '' ?>"
+                    value="<?= $order['OrderDate']?>"
                      <?php if ($templateParams["action"]==3) echo "disabled";?>
                     required
                 />
             </div>
             
             <?php if($templateParams["action"]!=1): ?>
-            <input type="hidden" name="orderid" value="<?php echo $order["ID"]; ?>" />
+                <input type="hidden" name="orderid" value="<?php echo $order["ID"]; ?>" />
             <?php endif; ?>
             <input type="hidden" name="action" value="<?php echo $templateParams["action"]; ?>" />
 
