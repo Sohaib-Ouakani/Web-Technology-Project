@@ -1,5 +1,5 @@
 <!-- ============================ HERO SECTION ============================ -->
-<section class="py-5">
+<section class="pt-5">
     <p class="text-muted mb-1">Prenota il tuo pranzo in un click</p>
 
     <h2 class="display-5 fw-bold mb-3">
