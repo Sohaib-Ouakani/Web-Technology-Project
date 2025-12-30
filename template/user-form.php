@@ -17,9 +17,9 @@
                 <label for="dishid" class="form-label fw-semibold">
                     Seleziona il piatto
                 </label>
-                <select name="dishid" id="dishid" class="form-select">
+                <select name="dishid" id="dishid" class="form-select" <?php if ($templateParams["action"]==3) echo "disabled";?>>>
                     <?php foreach($templateParams["menu"] as $dish): ?>
-                        <option value="<?php echo $dish["ID"]; ?>" <?php if($dish["ID"] == $order["DISH_ID"]): echo "selected"; endif;?>>
+                        <option value="<?php echo $dish["ID"]; ?>" <?php if($dish["ID"] == $order["DISH_ID"] && $templateParams["action"]!=1) echo "selected";?>>
                             <?php echo htmlspecialchars($dish["Name"]); ?>
                         </option>
                     <?php endforeach; ?>
@@ -36,6 +36,7 @@
                     id="datetime" 
                     class="form-control" 
                     value="<?= $order['OrderDate'] ?? '' ?>"
+                     <?php if ($templateParams["action"]==3) echo "disabled";?>
                     required
                 />
             </div>

@@ -95,6 +95,15 @@ class DatabaseHelper
         return $stmt->execute();
     }
 
+    public function deleteOrderOfUser($orderid, $userid){
+        $query = "DELETE FROM FOOD_ORDER WHERE ID = ? AND user_id = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ii',$orderid, $userid);
+        $stmt->execute();
+        var_dump($stmt->error);
+        return true;
+    }
+
     public function resetTables(){
         // Clear existing data (order matters due to foreign keys)
         $this->db->query("DELETE FROM FOOD_ORDER");

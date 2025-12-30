@@ -26,6 +26,7 @@
 
         header("location: login.php?formmsg=".$msg);
     }
+
     if($_POST["action"]==2){
         $orderid = $_POST["orderid"];
         $dishid = htmlspecialchars($_POST["dishid"]);
@@ -37,6 +38,18 @@
             $msg = "Modifica completata correttamente!";
         } else {
             $msg = "Errore nella modifica";
+        }
+        header("location: login.php?formmsg=".$msg);
+    }
+
+    if($_POST["action"]==3){
+        $orderid = $_POST["orderid"];
+        $userid = $_SESSION["id"];
+
+        if ($dbh->deleteOrderOfUser($orderid, $userid)) {
+            $msg = "Cancellazione completata correttamente!";
+        } else {
+            $msg = "Errore nella cancellazione";
         }
         header("location: login.php?formmsg=".$msg);
     }
