@@ -104,6 +104,13 @@ class DatabaseHelper
         return true;
     }
 
+    public function registerNewUser($name, $surname, $username, $password) {
+        $query = "INSERT INTO CLIENT (Name, Surname, Username, Password, IsAdmin) VALUES (?, ?, ?, ?, false)";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ssss', $name, $surname, $username, $password);
+        return $stmt->execute();
+    }
+
     public function resetTables(){
         // Clear existing data (order matters due to foreign keys)
         $this->db->query("DELETE FROM FOOD_ORDER");
