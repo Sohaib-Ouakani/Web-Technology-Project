@@ -23,7 +23,7 @@
     <div class="row g-4">
       <?php
         foreach($templateParams['cards'] as $element):
-          require 'template/card.php';
+          require("card.php");
         endforeach;
       ?>
     </div>
