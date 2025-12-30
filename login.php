@@ -15,10 +15,10 @@ if(isset($_POST["username"]) && $_POST["password"]){
 if(isUserLoggedIn()) {
     if ($_SESSION["admin"]) {
         $templateParams["titolo"] = "Volume-Admin";
-        $templateParams["nome"] = "admin-home.php";
+        $templateParams["nome"] = "admin/admin-home.php";
     } else {
         $templateParams["titolo"] = "Volume-Utente";
-        $templateParams["nome"] = "user-home.php";
+        $templateParams["nome"] = "user/user-home.php";
         $templateParams["orders"] = $dbh->getFoodOrderByClientId($_SESSION["id"]);
         if(isset($_GET["formmsg"])) {
             $templateParams["formmsg"] = $_GET["formmsg"];

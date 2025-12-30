@@ -21,7 +21,7 @@ if ($_GET["action"] != 1) {
 
 //Base Template
 $templateParams["titolo"] = "Volume-Gestisci ordine";
-$templateParams["nome"] = "user-form.php";
+$templateParams["nome"] = "user/user-form.php";
 
 $templateParams["menu"] = $dbh->getMenuItems();
 
