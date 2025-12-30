@@ -38,4 +38,15 @@ function getActionText($action){
 function isUserAdmin() {
     return isUserLoggedIn() && ($_SESSION["admin"] == true);
 }
+
+function renderHero($preamble, $main, $description) {
+    ?>
+    <section class="hero pt-5">
+        <p class="text-muted mb-1"><?= htmlspecialchars($preamble) ?></p>
+        <h2 class="display-5 fw-bold mb-3"><?= nl2br(htmlspecialchars($main)) ?></h2>
+        <p class="lead text-muted mb-4" style="max-width: 750px;"><?= htmlspecialchars($description) ?></p>
+        <hr>
+    </section>
+    <?php
+}
 ?>

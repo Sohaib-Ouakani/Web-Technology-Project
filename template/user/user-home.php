@@ -1,22 +1,30 @@
+<?php
+renderHero(
+    "Forse erano due click per fare una prenotazione",
+    "Ciao, " . $_SESSION["name"] . " " . $_SESSION["surname"] . "!",
+    "Da questa pagina puoi prenotare un nuovo piatto oppure visionare, modificare o cancellare le tue prenotazioni."
+);
+?>
 <section class="py-4">
-    <h2 class="fw-bold">Ciao, <?php echo $_SESSION["name"]; echo " "; echo $_SESSION["surname"];  ?></h2>
-
-    <?php if(isset($templateParams["formmsg"])):?>
-        <p><?php echo $templateParams["formmsg"]; ?></p>
+    <?php if(isset($templateParams["formmsg"])): ?>
+        <div class="alert alert-info mb-4" role="alert">
+            <?= htmlspecialchars($templateParams["formmsg"]) ?>
+        </div>
     <?php endif; ?>
-
-    <a href="manage-order.php?action=1" class="btn btn-secondary w-40">Aggiungi Ordine</a>
     
-    <section>
-        <h3>Queste sono le tue prenotazioni:</h3>
-
-        <div class="row g-4">
-            <?php
-            foreach($templateParams["orders"] as $element):
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h3 class="mb-0">Le tue prenotazioni</h3>
+        <a href="manage-order.php?action=1" class="btn btn-primary">
+            Aggiungi ordine
+        </a>
+    </div>
+    
+    <div class="row g-4">
+        <?php foreach($templateParams["orders"] as $element): ?>
+            <?php 
                 $element["isfoodoredercard"] = true;
                 require 'template/card.php';
-            endforeach;
-            ?>  
-        </div>    
-    </section>
+            ?>
+        <?php endforeach; ?>  
+    </div>
 </section>
