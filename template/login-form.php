@@ -3,13 +3,13 @@
       <!-- LOGIN -->
       <div class="col-12 col-md-4">
         <div class="p-4 rounded bg-secondary">
-          <h2 class="fw-bold mb-3">Login</h2>
 
           <?php if(isset($templateParams["loginerror"])): ?>
           <p><?php echo $templateParams["loginerror"]; ?></p>
           <?php endif; ?>
           
           <form action="#" method="POST">
+            <h2 class="fw-bold mb-3">Login</h2>
             
             <div class="mb-3">
               <label for="username" class="form-label">Username:</label>
