@@ -46,7 +46,7 @@ class DatabaseHelper
                 DISH.name as title, 
                 DISH.description as description, 
                 DISH.imagepath as image, 
-                FOOD_ORDER.orderdate as date, 
+                DATE_FORMAT(FOOD_ORDER.orderdate, '%Y-%m-%d %H:%i') as date,
                 FOOD_ORDER.iscomplete as iscomplete, 
                 FOOD_ORDER.id as orderid,
                 DISH.id as dishid
@@ -85,6 +85,14 @@ class DatabaseHelper
         $stmt->execute();
         
         return $stmt->insert_id;
+    }
+
+    public function updateOrderOfUser($orderid, $dishid, $userid, $orderdate) {
+        $query = "UPDATE FOOD_ORDER SET dish_id = ?, OrderDate = ? WHERE user_id = ? AND ID = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('isii', $dishid, $orderdate, $userid, $orderid);
+        
+        return $stmt->execute();
     }
 
     public function resetTables(){
@@ -140,22 +148,22 @@ class DatabaseHelper
         
         // Insert sample orders
         $orders = [
-            [1, 1, '2025-12-20 10:30:00', 1],
-            [2, 1, '2025-12-10 14:15:00', 0],
-            [3, 1, '2025-12-12 09:45:00', 1],
-            [4, 1, '2025-12-30 16:20:00', 0],
-            [5, 1, '2025-12-20 11:00:00', 1],
-            [6, 1, '2025-12-20 11:30:00', 1],
-            [3, 2, '2025-12-21 13:00:00', 1],
-            [4, 2, '2025-12-23 12:45:00', 0],
-            [5, 3, '2025-12-24 15:30:00', 0],
-            [6, 3, '2025-12-25 18:00:00', 1],
-            [7, 4, '2025-12-27 10:15:00', 0],
-            [8, 6, '2025-12-20 14:30:00', 1],
-            [1, 6, '2025-12-26 11:45:00', 0],
-            [5, 7, '2025-12-25 19:30:00', 1],
-            [5, 8, '2025-12-23 13:20:00', 1],
-            [6, 8, '2025-12-27 16:00:00', 0]
+            [1, 1, '2025-12-20 10:30', 1],
+            [2, 1, '2025-12-10 14:15', 0],
+            [3, 1, '2025-12-12 09:45', 1],
+            [4, 1, '2025-12-30 16:20', 0],
+            [5, 1, '2025-12-20 11:00', 1],
+            [6, 1, '2025-12-20 11:30', 1],
+            [3, 2, '2025-12-21 13:00', 1],
+            [4, 2, '2025-12-23 12:45', 0],
+            [5, 3, '2025-12-24 15:30', 0],
+            [6, 3, '2025-12-25 18:00', 1],
+            [7, 4, '2025-12-27 10:15', 0],
+            [8, 6, '2025-12-20 14:30', 1],
+            [1, 6, '2025-12-26 11:45', 0],
+            [5, 7, '2025-12-25 19:30', 1],
+            [5, 8, '2025-12-23 13:20', 1],
+            [6, 8, '2025-12-27 16:00', 0]
         ];
         
         $stmt = $this->db->prepare("INSERT INTO FOOD_ORDER (DISH_ID, USER_ID, OrderDate, IsComplete) VALUES (?, ?, ?, ?)");

@@ -19,7 +19,7 @@
                 </label>
                 <select name="dishid" id="dishid" class="form-select">
                     <?php foreach($templateParams["menu"] as $dish): ?>
-                        <option value="<?php echo $dish["ID"]; ?>">
+                        <option value="<?php echo $dish["ID"]; ?>" <?php if($dish["ID"] == $order["DISH_ID"]): echo "selected"; endif;?>>
                             <?php echo htmlspecialchars($dish["Name"]); ?>
                         </option>
                     <?php endforeach; ?>
@@ -35,12 +35,13 @@
                     name="datetime" 
                     id="datetime" 
                     class="form-control" 
+                    value="<?= $order['OrderDate'] ?? '' ?>"
                     required
                 />
             </div>
             
             <?php if($templateParams["action"]!=1): ?>
-            <input type="hidden" name="order" value="<?php echo $order["id"]; ?>" />
+            <input type="hidden" name="orderid" value="<?php echo $order["ID"]; ?>" />
             <?php endif; ?>
             <input type="hidden" name="action" value="<?php echo $templateParams["action"]; ?>" />
 

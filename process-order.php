@@ -26,4 +26,18 @@
 
         header("location: login.php?formmsg=".$msg);
     }
+    if($_POST["action"]==2){
+        $orderid = $_POST["orderid"];
+        $dishid = htmlspecialchars($_POST["dishid"]);
+        $dt = DateTime::createFromFormat('Y-m-d\TH:i', $_POST['datetime']);
+        $orderdate = $dt->format('Y-m-d H:i:s');
+        $userid = $_SESSION["id"];
+
+        if ($dbh->updateOrderOfUser($orderid, $dishid, $userid, $orderdate)) {
+            $msg = "Modifica completata correttamente!";
+        } else {
+            $msg = "Errore nella modifica";
+        }
+        header("location: login.php?formmsg=".$msg);
+    }
 ?>
