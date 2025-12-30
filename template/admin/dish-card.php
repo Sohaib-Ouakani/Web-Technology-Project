@@ -10,6 +10,8 @@
 
     <p>ImagePath: <?= $element["ImagePath"] ?></p>
 
+    <p>Piatto del giorno: <?= $element["Special"] == true ? "SI" : "No"; ?></p>
+
     <p>Operazioni:
       <a class="text-dark" 
         href="admin-process-dish.php?action=2&id=<?php echo $element["ID"]; ?>" 

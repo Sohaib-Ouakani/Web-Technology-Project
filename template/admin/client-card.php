@@ -11,7 +11,7 @@ $completeName = $element["Name"] . " " . $element["Surname"];
 
     <p>Password: <?= $element["Password"] ?></p>
 
-    <p>Diritti: <?= $element["IsAdmin"] == 0 ? "Utente" : "Admin"; ?></p>
+    <p>Diritti: <?= $element["IsAdmin"] == false ? "Utente" : "Admin"; ?></p>
 
     <p>Operazioni:
       <a class="text-dark" 

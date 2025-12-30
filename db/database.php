@@ -38,6 +38,28 @@ class DatabaseHelper
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getOrdersForAdmin() {
+        $query = "
+            SELECT 
+                FOOD_ORDER.id as orderid, 
+                FOOD_ORDER.IsComplete as iscomplete, 
+                FOOD_ORDER.OrderDate as orderdate,
+                DISH.Name as dishname,
+                DISH.ImagePath as dishimagepath,
+                CLIENT.Name as clientname,
+                CLIENT.Surname as clientsurname
+            FROM 
+                FOOD_ORDER 
+                JOIN DISH ON FOOD_ORDER.DISH_ID = DISH.ID
+                JOIN CLIENT ON FOOD_ORDER.USER_ID = CLIENT.ID
+            ORDER BY FOOD_ORDER.iscomplete, FOOD_ORDER.orderdate DESC";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function checkLogin($username, $password) {
         $query = "SELECT id, username, name, surname, isadmin FROM CLIENT WHERE username = ? AND password = ?";
         $stmt = $this->db->prepare($query);
