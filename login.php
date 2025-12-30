@@ -20,6 +20,9 @@ if(isUserLoggedIn()) {
         $templateParams["titolo"] = "Volume - Utente";
         $templateParams["nome"] = "user-home.php";
         $templateParams["orders"] = $dbh->getFoodOrderByClientId($_SESSION["id"]);
+        if(isset($_GET["formmsg"])) {
+            $templateParams["formmsg"] = $_GET["formmsg"];
+        }
     }
 }
 else{

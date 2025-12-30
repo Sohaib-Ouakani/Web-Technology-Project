@@ -5,7 +5,7 @@
 
 <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6 rounded bg-secondary p-4">
-        <form action="precess-order.php" method="post">
+        <form action="process-order.php" method="post">
             <h2 class="fw-bold">Gestisci Ordine</h2>
             <?php if($order == null): ?>
                 <p class="alert alert-warning text-center">
@@ -38,12 +38,15 @@
                     required
                 />
             </div>
-
-            <input type="hidden" name="order" value="<?php echo $templateParams["order"]; ?>" />
+            
+            <?php if($templateParams["action"]!=1): ?>
+            <input type="hidden" name="order" value="<?php echo $order["id"]; ?>" />
+            <?php endif; ?>
+            <input type="hidden" name="action" value="<?php echo $templateParams["action"]; ?>" />
 
             <div class="d-grid gap-2">
                 <input type="submit" class="btn btn-primary btn-lg" value="<?php echo $action ?>">
-                <a href="login.php" class="btn btn-outline-secondary w-100">Annulla</a>
+                <a href="login.php" class="btn btn-outline-secondary fw-bold w-100">Annulla</a>
             </div>
 
             <?php endif; ?>
