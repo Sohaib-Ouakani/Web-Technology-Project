@@ -34,7 +34,7 @@
             <nav class="col-12"> 
                 <ul class="row nav nav-pills text-center">
                     <li class="col-6 col-md-3 nav-item p-2"><a href="menu.php" class="nav-link bg-primary text-black">Menu</a></li>
-                    <li class="col-6 col-md-3 nav-item p-2"><a href="oggi.php" class="nav-link bg-primary text-black">Oggi</a></li>
+                    <li class="col-6 col-md-3 nav-item p-2"><a href="today.php" class="nav-link bg-primary text-black">Oggi</a></li>
                     <li class="col-6 col-md-3 nav-item p-2"><a href="info.php" class="nav-link bg-primary text-black">Chi Siamo</a></li>
                     <li class="col-6 col-md-3 nav-item p-2"><a href="login.php" class="nav-link bg-primary text-black"><?php if (isUserLoggedIn()) echo "Area personale"; else echo "Login"; ?></a></li>
                 </ul>

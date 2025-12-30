@@ -38,6 +38,14 @@ class DatabaseHelper
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getSpecialMenuItems() {
+        $stmt = $this->db->prepare("SELECT * FROM DISH WHERE Special = TRUE");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function getOrdersForAdmin() {
         $query = "
             SELECT 
