@@ -1,52 +1,28 @@
+<?php
+renderHero(
+    "Centro di controllo",
+    "Ciao, " . $_SESSION["name"] . " " . $_SESSION["surname"] . "!",
+    "Da qui puoi gestire menu, ordini, utenti e tutti i dati della caffetteria. Seleziona una delle opzioni qui sotto per accedere alla sezione dedicata."
+);
+?>
 <section class="py-4">
-  <h2>Ciao, <?php echo $_SESSION["name"]; echo " "; echo $_SESSION["surname"];  ?> (Admin)</h2>
-
-  <div class="row pt-4">
-    <div class="col-12 col-md-4 d-flex mb-4">
-      <a href="admin-manage-orders.php" class="p-4 rounded h-100 w-100 d-flex flex-column bg-secondary text-dark">
-        <header>
-          <p class="fw-bold fs-5 mb-2">Gestisci Prenotazioni</p>
-        </header>
-
-        <div class="mt-auto">
-          <div class="ratio ratio-16x9">
-            <img src="./upload/IMG_4558.jpg" 
-              alt=""
-              class="object-fit-cover rounded mt-2">
-          </div>
-        </div>
+  <div class="row pt-4 g-4">
+    <div class="col-12 col-md-4 d-flex">
+      <a href="admin-manage-orders.php" 
+         class="p-4 rounded h-100 w-100 d-flex flex-column justify-content-center align-items-center bg-secondary text-dark text-decoration-none shadow">
+        <p class="fw-bold fs-5 mb-0 text-center">Gestisci Prenotazioni</p>
       </a>
     </div>
-
-    <div class="col-12 col-md-4 d-flex mb-4">
-      <a href="admin-manage-clients.php" class="text-dark p-4 rounded h-100 w-100 d-flex flex-column bg-secondary">
-        <header>
-          <p class="fw-bold fs-5 mb-2m">Gestisci Clienti</p>
-        </header>
-
-        <div class="mt-auto">
-          <div class="ratio ratio-16x9">
-            <img src="./upload/IMG_4558.jpg" 
-              alt=""
-              class="object-fit-cover rounded mt-2">
-          </div>
-        </div>
+    <div class="col-12 col-md-4 d-flex">
+      <a href="admin-manage-clients.php" 
+         class="p-4 rounded h-100 w-100 d-flex flex-column justify-content-center align-items-center bg-secondary text-dark text-decoration-none shadow">
+        <p class="fw-bold fs-5 mb-0 text-center">Gestisci Clienti</p>
       </a>
     </div>
-
-    <div class="col-12 col-md-4 d-flex mb-4">
-      <a href="admin-manage-dishs.php" class="text-dark p-4 rounded h-100 w-100 d-flex flex-column bg-secondary">
-        <header>
-          <p class="fw-bold fs-5 mb-2">Gestisci Piatti</p>
-        </header>
-
-        <div class="mt-auto">
-          <div class="ratio ratio-16x9">
-            <img src="./upload/IMG_4558.jpg" 
-              alt=""
-              class="object-fit-cover rounded mt-2">
-          </div>
-        </div>
+    <div class="col-12 col-md-4 d-flex">
+      <a href="admin-manage-dishs.php" 
+         class="p-4 rounded h-100 w-100 d-flex flex-column justify-content-center align-items-center bg-secondary text-dark text-decoration-none shadow">
+        <p class="fw-bold fs-5 mb-0 text-center">Gestisci Piatti</p>
       </a>
     </div>
   </div>
