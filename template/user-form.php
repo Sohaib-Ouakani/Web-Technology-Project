@@ -4,8 +4,8 @@
 ?>
 
 <div class="row justify-content-center">
-    <div class="col-md-8 col-lg-6 rounded bg-secondary p-4">
-        <form action="process-order.php" method="post">
+    <div class="col-12 col-md-4">
+        <form action="process-order.php" method="post" class="bg-secondary rounded p-4">
             <h2 class="fw-bold">Gestisci Ordine</h2>
             <?php if($order == null): ?>
                 <p class="alert alert-warning text-center">
