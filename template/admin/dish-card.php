@@ -13,10 +13,10 @@
     <p>Operazioni:
       <a class="text-dark" 
         href="admin-process-dish.php?action=2&id=<?php echo $element["ID"]; ?>" 
-        aria-label="Modifica ordine per <?php echo htmlspecialchars($element["Name"]);?>">Modifica</a>
+        aria-label="Modifica piatto <?php echo htmlspecialchars($element["Name"]);?>">Modifica</a>
       <a class="text-dark" 
         href="admin-process-dish.php?action=3&id=<?php echo $element["ID"]; ?>"  
-        aria-label="Cancella ordine per <?php echo htmlspecialchars($element["Name"]);?>">Cancella</a> 
+        aria-label="Cancella piatto <?php echo htmlspecialchars($element["Name"]);?>">Cancella</a> 
     </p>
 
     <div class="mt-auto">
