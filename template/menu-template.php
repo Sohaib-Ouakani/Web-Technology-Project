@@ -1,17 +1,10 @@
-<!-- ============================ HERO SECTION ============================ -->
-<section class="pt-5">
-    <p class="text-muted mb-1">Ammira la nostra offerta di piatti</p>
-
-    <h1 class="display-5 fw-bold mb-3">
-      Goditi il nostro Menu
-    </h1>
-
-    <hr>
-</section>
-
-
-
-<!-- ============================ FEATURE CARDS ============================ -->
+<?php
+renderHero(
+    "Ammira la nostra offerta di piatti",
+    "Goditi il nostro Menu",
+    "Scopri i piatti freschi preparati ogni giorno dalla nostra cucina. Prelibatezze locali e ricette tradizionali per una pausa pranzo indimenticabile."
+);
+?>
 <section class="py-4">
     <div class="row g-4">
 
