@@ -30,6 +30,14 @@ class DatabaseHelper
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getClients() {
+        $stmt = $this->db->prepare("SELECT * FROM CLIENT");
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     public function checkLogin($username, $password) {
         $query = "SELECT id, username, name, surname, isadmin FROM CLIENT WHERE username = ? AND password = ?";
         $stmt = $this->db->prepare($query);

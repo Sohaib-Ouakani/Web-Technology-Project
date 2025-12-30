@@ -34,4 +34,8 @@ function getActionText($action){
 
     return $result;
 }
+
+function isUserAdmin() {
+    return isUserLoggedIn() && ($_SESSION["admin"] == true);
+}
 ?>
