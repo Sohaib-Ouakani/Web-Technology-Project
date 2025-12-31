@@ -34,14 +34,28 @@
 /* Base */
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
-body > div {
-  flex: 1;
+body h1 {
+    font-weight: 1000;
+}
+
+body footer h2:first-of-type {
+    font-size: xx-large;
+    font-weight: 1000;
+}
+
+body nav {
+    font-weight: 500;
+}
+
+body > div:last-of-type{
+    flex: 1;
 }
 
 body > footer h2 {
@@ -58,9 +72,9 @@ nav .nav-link:hover {
 }
 
 footer a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 footer a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 } 
