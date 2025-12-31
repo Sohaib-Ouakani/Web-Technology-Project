@@ -36,6 +36,15 @@ function getEmptyDishForAdmin() {
     );
 }
 
+function getEmptyOrderForAdmin() {
+    return array(
+        "DISH_ID" => "", 
+        "USER_ID" => "",
+        "OrderDate" => "",
+        "IsComplete" => "", 
+    );
+}
+
 function getActionText($action){
     $result = "";
     switch($action){

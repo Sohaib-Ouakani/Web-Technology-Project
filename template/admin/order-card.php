@@ -14,10 +14,10 @@
 
     <p>Operazioni:
       <a class="text-dark" 
-        href="admin-process-dish.php?action=2&id=<?php echo $element["orderid"]; ?>" 
+        href="admin-order-manage.php?action=2&id=<?php echo $element["orderid"]; ?>" 
         aria-label="Modifica ordine <?php echo htmlspecialchars($element["orderid"]);?>">Modifica</a>
       <a class="text-dark" 
-        href="admin-process-dish.php?action=3&id=<?php echo $element["orderid"]; ?>"  
+        href="admin-order-manage.php?action=3&id=<?php echo $element["orderid"]; ?>"  
         aria-label="Cancella ordine <?php echo htmlspecialchars($element["orderid"]);?>">Cancella</a> 
     </p>
 

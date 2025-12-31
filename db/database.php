@@ -180,6 +180,33 @@ class DatabaseHelper
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getOrderById($orderid) {
+        $query = "
+            SELECT *
+            FROM FOOD_ORDER
+            WHERE 
+                FOOD_ORDER.ID = ?";
+        
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $orderid);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+   public function getAllNonAdminClients() {
+        $query = "
+            SELECT *
+            FROM CLIENT
+            WHERE 
+                CLIENT.IsAdmin = false";
+        
+        $stmt = $this->db->prepare($query);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
+    } 
+
     // For Admin CRUD operations on clients 
 
     public function insertClient($name, $surname, $username, $password, $isadmin){
