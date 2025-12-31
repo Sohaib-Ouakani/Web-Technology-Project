@@ -20,10 +20,19 @@ function getEmptyOrder() {
 
 function getEmptyClientForAdmin() {
     return array(
-        "Nome" => "", 
+        "Name" => "", 
         "Username" => "",
         "Password" => "",
         "IsAdmin" => "", 
+    );
+}
+
+function getEmptyDishForAdmin() {
+    return array(
+        "Name" => "", 
+        "Description" => "",
+        "ImagePath" => "",
+        "Special" => "", 
     );
 }
 

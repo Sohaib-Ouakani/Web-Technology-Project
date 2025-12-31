@@ -166,6 +166,20 @@ class DatabaseHelper
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 
+    public function getDishById($dishid) {
+        $query = "
+            SELECT * 
+            FROM DISH
+            WHERE id = ?";
+            
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $dishid);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
     // For Admin CRUD operations on clients 
 
     public function insertClient($name, $surname, $username, $password, $isadmin){
@@ -207,6 +221,51 @@ class DatabaseHelper
 
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('i', $clientid);
+        
+        return $stmt->execute();;
+    }
+
+    // For Admin CRUD operations on dishes
+
+    public function insertDish($name, $description, $imagepath, $special){
+        $query = "
+            INSERT INTO DISH (Name, Description, ImagePath, Special) VALUES (?, ?, ?, ?)";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('sssi', $name, $description, $imagepath, $special);
+        
+        return $stmt->execute();
+    }
+
+    public function updateDishWithImage($dishid, $name, $description, $imagepath, $special) {
+        $query = "
+            UPDATE DISH SET Name = ?, Description = ?, ImagePath = ?, Special = ?
+            WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('sssii', $name, $description, $imagepath, $special, $dishid);
+        
+        return $stmt->execute();
+    }
+
+    public function updateDish($dishid, $name, $description, $special) {
+        $query = "
+            UPDATE DISH SET Name = ?, Description = ?, Special = ?
+            WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ssii', $name, $description, $special, $dishid);
+        
+        return $stmt->execute();
+    }
+
+    public function deleteDish($dishid){
+        $query = "
+            DELETE FROM DISH 
+            WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $dishid);
         
         return $stmt->execute();;
     }

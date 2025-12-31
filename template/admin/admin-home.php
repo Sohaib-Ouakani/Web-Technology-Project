@@ -20,7 +20,7 @@ renderHero(
       </a>
     </div>
     <div class="col-12 col-md-4 d-flex">
-      <a href="admin-dishs-home.php" 
+      <a href="admin-dishes-home.php" 
          class="p-4 rounded h-100 w-100 d-flex flex-column justify-content-center align-items-center bg-secondary text-dark text-decoration-none">
         <p class="fw-bold fs-5 mb-0 text-center">Gestisci Piatti</p>
       </a>
