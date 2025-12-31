@@ -118,15 +118,16 @@ class DatabaseHelper
 
     public function insertOrder($dishid, $userid, $orderdate){
         $query = "INSERT INTO FOOD_ORDER (dish_id, user_id, OrderDate, IsComplete) VALUES (?, ?, ?, false)";
+        
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('iis', $dishid, $userid, $orderdate);
-        $stmt->execute();
         
-        return $stmt->insert_id;
+        return $stmt->execute();
     }
 
     public function updateOrderOfUser($orderid, $dishid, $userid, $orderdate) {
         $query = "UPDATE FOOD_ORDER SET dish_id = ?, OrderDate = ? WHERE user_id = ? AND ID = ?";
+
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('isii', $dishid, $orderdate, $userid, $orderid);
         
@@ -135,11 +136,11 @@ class DatabaseHelper
 
     public function deleteOrderOfUser($orderid, $userid){
         $query = "DELETE FROM FOOD_ORDER WHERE ID = ? AND user_id = ?";
+
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('ii',$orderid, $userid);
-        $stmt->execute();
-        var_dump($stmt->error);
-        return true;
+        
+        return $stmt->execute();
     }
 
     public function registerNewUser($name, $surname, $username, $password) {
@@ -147,6 +148,67 @@ class DatabaseHelper
         $stmt = $this->db->prepare($query);
         $stmt->bind_param('ssss', $name, $surname, $username, $password);
         return $stmt->execute();
+    }
+
+    // For Admin forms
+
+    public function getClientById($clientid) {
+        $query = "
+            SELECT * 
+            FROM CLIENT
+            WHERE id = ?";
+            
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $clientid);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    // For Admin CRUD operations on clients 
+
+    public function insertClient($name, $surname, $username, $password, $isadmin){
+        $query = "
+            INSERT INTO CLIENT (Name, Surname, Username, Password, IsAdmin) VALUES (?, ?, ?, ?, ?)";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ssssi', $name, $surname, $username, $password, $isadmin);
+        
+        return $stmt->execute();
+    }
+
+    public function updateClientWithPassword($clientid, $name, $surname, $username, $password, $isadmin) {
+        $query = "
+            UPDATE CLIENT SET Name = ?, Surname = ?, Username = ?, Password = ?, IsAdmin = ? 
+            WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('ssssii', $name, $surname, $username, $password, $isadmin, $clientid);
+        
+        return $stmt->execute();
+    }
+
+    public function updateClient($clientid, $name, $surname, $username, $isadmin) {
+        $query = "
+            UPDATE CLIENT SET Name = ?, Surname = ?, Username = ?, IsAdmin = ? 
+            WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('sssii', $name, $surname, $username, $isadmin, $clientid);
+        
+        return $stmt->execute();
+    }
+
+    public function deleteClient($clientid){
+        $query = "
+            DELETE FROM CLIENT 
+            WHERE id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $clientid);
+        
+        return $stmt->execute();;
     }
 
     public function resetTables(){

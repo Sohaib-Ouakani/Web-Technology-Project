@@ -6,10 +6,14 @@ if (!isUserAdmin()) {
 }
 
 //Base Template
-$templateParams["titolo"] = "Volume-Gestisci menù";
+$templateParams["titolo"] = "Volume-Home menù";
 $templateParams["nome"] = "admin/admin-dishs-home-template.php";
 
 $templateParams["dishs"] = $dbh->getMenuItems();
+
+if(isset($_GET["formmsg"])) {
+    $templateParams["formmsg"] = $_GET["formmsg"];
+}
 
 require 'template/base.php';
 ?>

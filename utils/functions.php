@@ -18,6 +18,15 @@ function getEmptyOrder() {
     );
 }
 
+function getEmptyClientForAdmin() {
+    return array(
+        "Nome" => "", 
+        "Username" => "",
+        "Password" => "",
+        "IsAdmin" => "", 
+    );
+}
+
 function getActionText($action){
     $result = "";
     switch($action){

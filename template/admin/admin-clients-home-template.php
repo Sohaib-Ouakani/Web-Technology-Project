@@ -13,7 +13,7 @@ renderLittleHero(
     
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h3 class="mb-0">I clienti</h3>
-        <a href="admin-process-client.php?action=1" class="btn btn-primary">
+        <a href="admin-client-manage.php?action=1" class="btn btn-primary">
             Aggiungi cliente
         </a>
     </div>

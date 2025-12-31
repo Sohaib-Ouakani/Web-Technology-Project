@@ -15,10 +15,10 @@ $completeName = $element["Name"] . " " . $element["Surname"];
 
     <p>Operazioni:
       <a class="text-dark" 
-        href="admin-process-dish.php?action=2&id=<?php echo $element["ID"]; ?>" 
+        href="admin-client-manage.php?action=2&id=<?php echo $element["ID"]; ?>" 
         aria-label="Modifica cliente <?php echo htmlspecialchars($completeName);?>">Modifica</a>
       <a class="text-dark" 
-        href="admin-process-dish.php?action=3&id=<?php echo $element["ID"]; ?>"  
+        href="admin-client-manage.php?action=3&id=<?php echo $element["ID"]; ?>"  
         aria-label="Cancella cliente <?php echo htmlspecialchars($completeName);?>">Cancella</a> 
     </p>
   </article>

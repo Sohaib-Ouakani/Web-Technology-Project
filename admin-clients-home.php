@@ -6,10 +6,14 @@ if (!isUserAdmin()) {
 }
 
 //Base Template
-$templateParams["titolo"] = "Volume-Gestisci clienti";
+$templateParams["titolo"] = "Volume-Home clienti";
 $templateParams["nome"] = "admin/admin-clients-home-template.php";
 
 $templateParams["clients"] = $dbh->getClients();
+
+if(isset($_GET["formmsg"])) {
+    $templateParams["formmsg"] = $_GET["formmsg"];
+}
 
 require 'template/base.php';
 ?>

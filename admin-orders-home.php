@@ -6,10 +6,14 @@ if (!isUserAdmin()) {
 }
 
 //Base Template
-$templateParams["titolo"] = "Volume-Gestisci ordini";
+$templateParams["titolo"] = "Volume-Home ordini";
 $templateParams["nome"] = "admin/admin-orders-home-template.php";
 
 $templateParams["orders"] = $dbh->getOrdersForAdmin();
+
+if(isset($_GET["formmsg"])) {
+    $templateParams["formmsg"] = $_GET["formmsg"];
+}
 
 require 'template/base.php';
 ?>
