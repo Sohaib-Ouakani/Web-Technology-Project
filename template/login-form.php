@@ -1,6 +1,5 @@
 <section class="py-4">
     <div class="row justify-content-center">
-      <!-- LOGIN -->
       <div class="col-12 col-md-4">
         <div class="p-4 rounded bg-secondary">
 

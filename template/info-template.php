@@ -5,7 +5,6 @@ renderHero(
     "Studenti dell'Università di Bologna - Campus di Cesena. Questo progetto è stato realizzato per il corso di Tecnologie Web."
 );
 ?>
-
 <section class="py-4">
     <div class="mb-5">
         <h2 class="mb-4">Il Nostro Team</h2>
