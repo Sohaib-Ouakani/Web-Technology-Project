@@ -4,26 +4,25 @@
 ?>
 <div class="row justify-content-center mt-3">
     <div class="col-12 col-md-4">
-        <form action="admin-dish-process.php" enctype="multipart/form-data" method="post" class="bg-secondary rounded p-4">
-            <h2 class="fw-bold">Gestisci Piatto</h2>
+        <form action="admin-order-process.php" enctype="multipart/form-data" method="post" class="bg-secondary rounded p-4">
+            <h2 class="fw-bold">Gestisci Ordine</h2>
             <?php if($order == null): ?>
                 <p class="alert alert-warning text-center">
                     Piatto non trovato
                 </p>
             <?php else: ?>
             <div class="mb-3">
-                <label for="userid" class="form-label fw-semibold">
+                <label for="clientid" class="form-label fw-semibold">
                 Seleziona il Cliente
                 </label>
-                <select name="userid" id="userid"
+                <select name="clientid" id="clientid"
                     class="form-select" 
                     <?php if ($templateParams["action"]==3) echo "disabled";?>>>
 
                     <?php foreach($templateParams["users"] as $user): ?>
                         <option value="<?php echo $user["ID"]; ?>" <?php if($user["ID"] == $order["USER_ID"] && $templateParams["action"]!=1) echo "selected";?>>
-                            <?php 
-                                echo htmlspecialchars($user["Name"]);
-                                echo htmlspecialchars($user["Surname"]);
+                            <?= 
+                                htmlspecialchars($user["Name"]) . " " . htmlspecialchars($user["Surname"]);
                             ?>
                         </option>
                     <?php endforeach; ?>
@@ -39,7 +38,7 @@
 
                     <?php foreach($templateParams["menu"] as $dish): ?>
                         <option value="<?php echo $dish["ID"]; ?>" <?php if($dish["ID"] == $order["DISH_ID"] && $templateParams["action"]!=1) echo "selected";?>>
-                            <?php echo htmlspecialchars($dish["Name"]); ?>
+                            <?= htmlspecialchars($dish["Name"]); ?>
                         </option>
                     <?php endforeach; ?>
 

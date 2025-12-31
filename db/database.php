@@ -297,6 +297,35 @@ class DatabaseHelper
         return $stmt->execute();;
     }
 
+    // For Admin CRUD operations on orders
+    
+    public function insertOrderAdmin($dishid, $userid, $orderdate, $iscomplete) {
+        $query = "INSERT INTO FOOD_ORDER (dish_id, user_id, OrderDate, IsComplete) VALUES (?, ?, ?, ?)";
+        
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('iisi', $dishid, $userid, $orderdate, $iscomplete);
+        
+        return $stmt->execute();
+    }
+
+    public function updateOrder($orderid, $dishid, $userid, $orderdate, $iscomplete) {
+        $query = "UPDATE FOOD_ORDER SET dish_id = ?, OrderDate = ?, user_id = ?, iscomplete = ? WHERE ID = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('isiii', $dishid, $orderdate, $userid, $iscomplete, $orderid);
+        
+        return $stmt->execute();
+    }
+
+    public function deleteOrder($orderid) {
+        $query = "DELETE FROM FOOD_ORDER WHERE ID = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param('i', $orderid);
+        
+        return $stmt->execute();
+    }
+
     public function resetTables(){
         // Clear existing data (order matters due to foreign keys)
         $this->db->query("DELETE FROM FOOD_ORDER");
