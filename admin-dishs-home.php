@@ -7,7 +7,7 @@ if (!isUserAdmin()) {
 
 //Base Template
 $templateParams["titolo"] = "Volume-Gestisci menù";
-$templateParams["nome"] = "admin/admin-manage-dishs-template.php";
+$templateParams["nome"] = "admin/admin-dishs-home-template.php";
 
 $templateParams["dishs"] = $dbh->getMenuItems();
 

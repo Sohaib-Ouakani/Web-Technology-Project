@@ -7,7 +7,7 @@ if (!isUserAdmin()) {
 
 //Base Template
 $templateParams["titolo"] = "Volume-Gestisci ordini";
-$templateParams["nome"] = "admin/admin-manage-orders-template.php";
+$templateParams["nome"] = "admin/admin-orders-home-template.php";
 
 $templateParams["orders"] = $dbh->getOrdersForAdmin();
 

@@ -7,7 +7,7 @@ if (!isUserAdmin()) {
 
 //Base Template
 $templateParams["titolo"] = "Volume-Gestisci clienti";
-$templateParams["nome"] = "admin/admin-manage-clients-template.php";
+$templateParams["nome"] = "admin/admin-clients-home-template.php";
 
 $templateParams["clients"] = $dbh->getClients();
 
