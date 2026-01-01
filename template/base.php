@@ -128,7 +128,7 @@
                             <ul class="list-unstyled">
                                 <li><a href="info.php" class="text-dark">Contattaci</a></li>
                                 <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project" class="text-dark">Repo</a></li>
-                                <li><a href="#" class="text-dark">Legal</a></li>
+                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project/blob/b7b28e223b09b86cb46e3ad2129f1a0380a0bd60/LICENSE#L1" class="text-dark">Legal</a></li>
                             </ul>
                         </section>
                     </div>
