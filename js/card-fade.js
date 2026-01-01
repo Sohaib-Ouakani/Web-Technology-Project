@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.3,
         stagger: 0.2, 
         ease: "power3.out"
     });
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         scale: 1,
         opacity: 1,
-        duration: 1,
+        duration: 0.2,
         stagger: 0.2,
         ease: "back.out(1.2)"
     });
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         opacity: 1,
         y: 0,
-        duration: 0.8,
+        duration: 0.3,
         stagger: 0.2,
         ease: "power3.out"
     });
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         scale: 1,
         opacity: 1,
-        duration: 0.6,
+        duration: 0.2,
         stagger: 0.2,
         ease: "back.out(1.5)"
     });

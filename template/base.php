@@ -96,7 +96,7 @@
                 <!-- Brand -->
                 <header class="col-md-4 mb-4">
                     <h2>VOLUME</h2>
-                    <p class="text-muted mb-0">
+                    <p class="mb-0">
                         La caffetteria universitaria all'interno del campus UNIBO di Cesena
                     </p>
                 </header>
@@ -108,8 +108,8 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Features</h2>
                             <ul class="list-unstyled">
-                                <li><a href="login.php" class="text-dark">Ordini online</a></li>
-                                <li><a href="today.php" class="text-dark">Menu del giorno</a></li>
+                                <li><a href="login.php" class="">Ordini online</a></li>
+                                <li><a href="today.php" class="">Menu del giorno</a></li>
                             </ul>
                         </section>
 
@@ -117,8 +117,8 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Learn more</h2>
                             <ul class="list-unstyled">
-                                <li><a href="info.php" class="text-dark">Chi siamo</a></li>
-                                <li><a href="https://maps.app.goo.gl/C2M3G2Hvx2KVeAJ29" class="text-dark">Dove siamo</a></li>
+                                <li><a href="info.php" class="">Chi siamo</a></li>
+                                <li><a href="https://maps.app.goo.gl/C2M3G2Hvx2KVeAJ29" class="">Dove siamo</a></li>
                             </ul>
                         </section>
 
@@ -126,9 +126,9 @@
                         <section class="col-6 col-md-4 mb-4">
                             <h2 class="fw-semibold mb-3">Support</h2>
                             <ul class="list-unstyled">
-                                <li><a href="info.php" class="text-dark">Contattaci</a></li>
-                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project" class="text-dark">Repo</a></li>
-                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project/blob/b7b28e223b09b86cb46e3ad2129f1a0380a0bd60/LICENSE#L1" class="text-dark">Legal</a></li>
+                                <li><a href="info.php" class="">Contattaci</a></li>
+                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project" class="">Repo</a></li>
+                                <li><a href="https://github.com/Sohaib-Ouakani/Web-Technology-Project/blob/b7b28e223b09b86cb46e3ad2129f1a0380a0bd60/LICENSE#L1" class="">Legal</a></li>
                             </ul>
                         </section>
                     </div>
@@ -137,7 +137,7 @@
 
             </hr>
 
-            <footer class="text-center text-muted small">
+            <footer class="text-center small">
                 © 2026 Volume — Tutti i diritti riservati
             </footer>
         </div>

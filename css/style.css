@@ -31,9 +31,15 @@
     background-color: #C5E3C1 !important;
 }
 
+.btn-outline-secondary {
+    color: black;
+    border-color: black;
+}
+
 /* Base */
 
 body {
+    color: black;
     font-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
@@ -49,6 +55,7 @@ body footer header h2:first-of-type {
     font-size: x-large;
     font-weight: 1000;
 }
+
 body nav {
     font-weight: 500;
 }
@@ -72,6 +79,7 @@ nav .nav-link:hover {
 
 footer a {
     text-decoration: none;
+    color: black;
 }
 
 footer a:hover {
