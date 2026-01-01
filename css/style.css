@@ -45,11 +45,10 @@ body h1 {
     font-weight: 1000;
 }
 
-body footer h2:first-of-type {
-    font-size: xx-large;
+body footer header h2:first-of-type {
+    font-size: x-large;
     font-weight: 1000;
 }
-
 body nav {
     font-weight: 500;
 }

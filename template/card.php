@@ -6,7 +6,7 @@
 
     <?php if(isset($element["isfoodoredercard"]) && $element["isfoodoredercard"] == true): ?>
     <p>Prenotato per: <?php echo $element["date"]; ?></p>
-    <p>Stato: <?= $element["iscomplete"] == 0 ? "In processo" : "Completato" ?></p>
+    <p>Stato: <?= $element["iscomplete"] == 0 ? "In elaborazione" : "Completato" ?></p>
     <p>
     <?php if($element["iscomplete"] == false): ?>
       Operazioni:

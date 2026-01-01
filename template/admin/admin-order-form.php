@@ -45,7 +45,7 @@
                 </select>
             </div>
 
-            <div class="mb-4">
+            <div class="mb-3">
                 <label for="datetime" class="form-label fw-semibold">
                     Seleziona orario prenotazione
                 </label>
@@ -59,21 +59,22 @@
                     required
                 />
             </div>
-            <div class="form-check">
-                <input 
-                    type="checkbox" 
-                    name="iscomplete" 
-                    id="iscomplete" 
-                    class="form-check-input" 
-                    value="1"
-                    <?php if($order['IsComplete']) echo "checked"; ?>
-                    <?php if ($templateParams["action"]==3) echo "disabled";?>
-                />
-                <label for="iscomplete" class="form-check-label fw-semibold">
-                    Ordine Completato
-                </label>
+            <div class="mb-4">
+                <div class="form-check">
+                    <input 
+                        type="checkbox" 
+                        name="iscomplete" 
+                        id="iscomplete" 
+                        class="form-check-input" 
+                        value="1"
+                        <?php if($order['IsComplete']) echo "checked"; ?>
+                        <?php if ($templateParams["action"]==3) echo "disabled";?>
+                    />
+                    <label for="iscomplete" class="form-check-label fw-semibold">
+                        Ordine Completato
+                    </label>
+                </div>
             </div>
-        
             <?php if($templateParams["action"]!=1): ?>
                 <input type="hidden" name="orderid" value="<?php echo $order["ID"]; ?>" />
             <?php endif; ?>
