@@ -1,6 +1,6 @@
 # Web Technology Project
 
-PHP web application with role-based interfaces for administrators and clients.
+Web application for administrators and clients of Volume bar Cesena.
 
 ## Documentation
 
