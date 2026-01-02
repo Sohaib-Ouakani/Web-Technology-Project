@@ -1,1 +1,184 @@
 .DS_Store
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# LaTeX intermediate files
+*.dvi
+*.xdv
+*-converted-to.*
+
+# Bibliography files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml
+
+# Build tool auxiliary files
+*.fdb_latexmk
+*.synctex
+*.synctex(busy)
+*.synctex.gz
+*.synctex.gz(busy)
+*.pdfsync
+
+# Build directories
+*.latexmain
+
+# Glossaries
+*.acn
+*.acr
+*.glg
+*.glo
+*.gls
+*.glsdefs
+*.lzo
+*.lzs
+
+# Hyperref
+*.brf
+
+# Knitr
+*-concordance.tex
+
+# Listings
+*.lol
+
+# Index files
+*.idx
+*.ilg
+*.ind
+
+# Nomenclature
+*.nlg
+*.nlo
+*.nls
+
+# Beamer
+*.nav
+*.pre
+*.snm
+*.vrb
+
+# Changes
+*.soc
+
+# Comment
+*.cut
+
+# Enumitem
+*.ent
+
+# Fixme
+*.lox
+
+# Makeindex
+*.maf
+*.mlf
+*.mlt
+*.mtc[0-9]*
+*.slf[0-9]*
+*.slt[0-9]*
+*.stc[0-9]*
+
+# Minted
+_minted*
+*.pyg
+
+# Morewrites
+*.mw
+
+# Nomencl
+*.nlg
+*.nlo
+*.nls
+
+# Pax
+*.pax
+
+# Pdfpcnotes
+*.pdfpc
+
+# Sagetex
+*.sagetex.sage
+*.sagetex.py
+*.sagetex.scmd
+
+# Scrwfile
+*.wrt
+
+# Sympy
+*.sout
+*.sympy
+sympy-plots-for-*.tex/
+
+# Pdfcomment
+*.upa
+*.upb
+
+# Pythontex
+*.pytxcode
+pythontex-files-*/
+
+# Tcolorbox
+*.listing
+
+# TikZ & PGF
+*.dpth
+*.md5
+*.auxlock
+
+# Todonotes
+*.tdo
+
+# Xindy
+*.xdy
+
+# xmpincl
+*.xmpi
+
+# xindy
+*.xdy
+
+# xypic precompiled matrices and outlines
+*.xyc
+*.xyd
+
+# endfloat
+*.ttt
+*.fff
+
+# Latexindent backup files
+*.bak[0-9]
+*.bak[0-9][0-9]
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Keep the PDF output (comment out if you don't want to track PDFs)
+# *.pdf
+
+# Keep images folder
+!img/
+!img/**
