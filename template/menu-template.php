@@ -5,7 +5,7 @@ renderHero(
     $heroDesc
 );
 ?>
-<section class="py-4">
+<div class="py-4">
     <div class="row g-4">
       <?php 
         foreach($templateParams["menuItems"] as $item):
@@ -16,4 +16,4 @@ renderHero(
         endforeach;
       ?>
     </div>
-</section>
+</div>

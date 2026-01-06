@@ -87,7 +87,7 @@
                 <?php endif; ?>
                 <input type="hidden" name="action" value="<?php echo $templateParams["action"]; ?>" />
                 <div class="d-grid gap-2">
-                    <input type="submit" class="btn btn-primary btn-lg" value="<?php echo $action ?>">
+                    <input type="submit" class="btn btn-primary btn-lg" value="<?php echo $action ?>" />
                     <a href="admin-clients-home.php" class="btn btn-outline-secondary fw-bold w-100">Annulla</a>
                 </div>
             <?php endif; ?>

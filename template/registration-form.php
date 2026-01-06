@@ -24,26 +24,24 @@
                 <input type="password" id="password" name="password" class="form-control" required/>
                 
                 <!-- Strength Bar -->
-                <div class="progress mt-2" style="height: 6px;">
+                <div class="progress mt-2 strength-bar">
                     <div id="strengthBar" class="progress-bar strength-bar"></div>
                 </div>
                 
                 <!-- Strength Text -->
-                <small id="strengthText" class="fw-bold mt-1 d-block"></small>
+                <div id="strengthText" class="fw-bold mt-1 d-block"></div>
                 
                 <!-- Requirements -->
-                <small>
-                    <ul class="d-block mt-2 p-0">
-                        <li id="req1" class="d-inline me-2 req-not-met me-2">✓ 8+ caratteri</li>
-                        <li id="req3" class="d-inline me-2 req-not-met me-2">✓ a-z</li>
-                        <li id="req2" class="d-inline me-2 req-not-met me-2">✓ A-Z</li>
-                        <li id="req4" class="d-inline me-2 req-not-met me-2">✓ 0-9</li>
-                        <li id="req5" class="d-inline me-2 req-not-met">✓ !@#$</li>
-                    </ul>
-                </small>
+                <ul class="d-block mt-2 p-0">
+                    <li id="req1" class="d-inline me-2 req-not-met me-2">✓ 8+ caratteri</li>
+                    <li id="req3" class="d-inline me-2 req-not-met me-2">✓ a-z</li>
+                    <li id="req2" class="d-inline me-2 req-not-met me-2">✓ A-Z</li>
+                    <li id="req4" class="d-inline me-2 req-not-met me-2">✓ 0-9</li>
+                    <li id="req5" class="d-inline me-2 req-not-met">✓ !@#$</li>
+                </ul>
             </div>
             <div class="d-grid gap-2">
-                <input type="submit" class="btn btn-primary btn-lg" value="Registrati">
+                <input type="submit" class="btn btn-primary btn-lg" value="Registrati" />
                 <a href="login.php" class="btn btn-outline-secondary fw-bold w-100">Annulla</a>
             </div>
         </form>

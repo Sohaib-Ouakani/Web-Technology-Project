@@ -55,9 +55,8 @@
                             <img 
                                 src="<?php echo UPLOAD_DIR.$dish["ImagePath"]; ?>" 
                                 alt="Anteprima piatto" 
-                                class="img-fluid rounded shadow-sm"
-                                style="max-height: 200px; object-fit: cover;" 
-                            /> //TODO: this need to be done in the css file
+                                class="img-fluid rounded shadow-sm admin-form-preview-img"
+                            />
                             <p class="text-muted small mt-2">Immagine corrente</p>
                         </div>
                     <?php endif; ?>
@@ -83,7 +82,7 @@
                 <?php endif; ?>
                 <input type="hidden" name="action" value="<?php echo $templateParams["action"]; ?>" />
                 <div class="d-grid gap-2">
-                    <input type="submit" class="btn btn-primary btn-lg" value="<?php echo $action ?>">
+                    <input type="submit" class="btn btn-primary btn-lg" value="<?php echo $action ?>" />
                     <a href="admin-dishes-home.php" class="btn btn-outline-secondary fw-bold w-100">Annulla</a>
                 </div>
             <?php endif; ?>

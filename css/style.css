@@ -86,6 +86,25 @@ footer a:hover {
     text-decoration: underline;
 } 
 
+/* Admin Form */
+
+.admin-form-preview-img {
+    max-height: 200px; 
+    object-fit: cover;
+}
+
+/* Registration Form */
+
+.strength-bar {
+    height: 6px;
+}
+
+/* Hero */
+
+.hero-description {
+    max-width: 750px;
+}
+
 /* GASP */
 
 .card-animate {

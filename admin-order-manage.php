@@ -18,7 +18,7 @@ if ($_GET["action"] != 1) {
     $templateParams["dish"] = getEmptyOrderForAdmin();
 }
 //Base Template
-$templateParams["titolo"] = "Volume-Gestisci piatto";
+$templateParams["titolo"] = "Volume-Gestisci ordine";
 $templateParams["nome"] = "admin/admin-order-form.php";
 
 $templateParams["users"] = $dbh->getAllNonAdminClients();

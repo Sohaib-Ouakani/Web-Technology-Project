@@ -17,7 +17,7 @@
                 </label>
                 <select name="clientid" id="clientid"
                     class="form-select" 
-                    <?php if ($templateParams["action"]==3) echo "disabled";?>>>
+                    <?= ($templateParams["action"] == 3) ? "disabled" : "" ?>>
 
                     <?php foreach($templateParams["users"] as $user): ?>
                         <option value="<?php echo $user["ID"]; ?>" <?php if($user["ID"] == $order["USER_ID"] && $templateParams["action"]!=1) echo "selected";?>>
@@ -34,7 +34,7 @@
                 <label for="dishid" class="form-label fw-semibold">
                     Seleziona il piatto
                 </label>
-                <select name="dishid" id="dishid" class="form-select" <?php if ($templateParams["action"]==3) echo "disabled";?>>>
+                <select name="dishid" id="dishid" class="form-select" <?= ($templateParams["action"] == 3) ? "disabled" : "" ?>>
 
                     <?php foreach($templateParams["menu"] as $dish): ?>
                         <option value="<?php echo $dish["ID"]; ?>" <?php if($dish["ID"] == $order["DISH_ID"] && $templateParams["action"]!=1) echo "selected";?>>
@@ -81,7 +81,7 @@
             <input type="hidden" name="action" value="<?php echo $templateParams["action"]; ?>" />
 
             <div class="d-grid gap-2">
-                <input type="submit" class="btn btn-primary btn-lg" value="<?php echo $action ?>">
+                <input type="submit" class="btn btn-primary btn-lg" value="<?php echo $action ?>" />
                 <a href="admin-orders-home.php" class="btn btn-outline-secondary fw-bold w-100">Annulla</a>
             </div>
 

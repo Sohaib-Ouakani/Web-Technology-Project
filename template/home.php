@@ -8,7 +8,7 @@ renderHero(
       Caffè, panini, primi piatti e dolci artigianali: tutto fatto con ingredienti locali e passione universitaria."
 );
 ?>
-<section class="py-4">
+<div class="py-4">
     <div class="row g-4">
       <?php
         foreach($templateParams['cards'] as $element):
@@ -16,4 +16,4 @@ renderHero(
         endforeach;
       ?>
     </div>
-</section>
+</div>

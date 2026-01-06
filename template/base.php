@@ -4,26 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo $templateParams["titolo"]; ?></title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- For font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     
+    <!-- GASP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    
-    <?php
-    if(isset($templateParams["js"])):
-        foreach($templateParams["js"] as $script):
-    ?>
-    <script src="<?php echo $script; ?>"></script>
-    <?php
-        endforeach;
-    endif;
-    ?>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
     <div class="container">
@@ -35,7 +28,7 @@
                         <a class="navbar-brand d-flex align-items-center" href="index.php">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
                                 alt="Volume Logo" 
-                                class="me-3">
+                                class="me-3" />
                             <h1 class="mb-0">VOLUME</h1>
                         </a>
                     </div>
@@ -46,7 +39,7 @@
                 <nav class="col-12"> 
                     <ul class="row nav nav-pills text-center">
                         <li class="col-6 col-md-3 nav-item p-2"><a href="menu.php" class="nav-link bg-primary text-black">Menu</a></li>
-                        <li class="col-6 col-md-3 nav-item p-2"><a href="today.php" class="nav-link bg-primary text-black">Oggi</a></li>
+                        <li class="col-6 col-md-3 nav-item p-2"><a href="today.php" class="nav-link bg-primary text-black">Special</a></li>
                         <li class="col-6 col-md-3 nav-item p-2"><a href="info.php" class="nav-link bg-primary text-black">Chi Siamo</a></li>
                         <li class="col-6 col-md-3 nav-item p-2"><a href="login.php" class="nav-link bg-primary text-black"><?php if (isUserLoggedIn()) echo "Area personale"; else echo "Login"; ?></a></li>
                     </ul>
@@ -62,7 +55,7 @@
                         <a class="navbar-brand d-flex align-items-center" href="index.php">
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSirk_N-1SIL8YTXlgN7bNXnzOa08I2ZRx68w&s" 
                                 alt="Volume Logo" 
-                                class="me-3">
+                                class="me-3" />
                             <h1 class="mb-0">VOLUME</h1>
                         </a>
                     </div>
@@ -73,7 +66,7 @@
                 <nav class="col-6"> 
                     <ul class="row nav nav-pills text-center">
                         <li class="col-3 nav-item p-2"><a href="menu.php" class="nav-link text-black">Menu</a></li>
-                        <li class="col-3 nav-item p-2"><a href="today.php" class="nav-link text-black">Oggi</a></li>
+                        <li class="col-3 nav-item p-2"><a href="today.php" class="nav-link text-black">Special</a></li>
                         <li class="col-3 nav-item p-2"><a href="info.php" class="nav-link text-black">Chi Siamo</a></li>
                         <li class="col-3 nav-item p-2"><a href="login.php" class="nav-link bg-primary text-black"><?php if (isUserLoggedIn()) echo "Area personale"; else echo "Login"; ?></a></li>
                     </ul>
@@ -94,15 +87,15 @@
         <div class="container">
             <div class="row justify-content-between align-items-start">
                 <!-- Brand -->
-                <header class="col-md-4 mb-4">
+                <section class="col-md-4 mb-4">
                     <h2>VOLUME</h2>
                     <p class="mb-0">
                         La caffetteria universitaria all'interno del campus UNIBO di Cesena
                     </p>
-                </header>
+                </section>
 
                 <!-- Right-aligned links -->
-                <section class="col-md-7">
+                <div class="col-md-7">
                     <div class="row text-md-end">
                         <!-- Features -->
                         <section class="col-6 col-md-4 mb-4">
@@ -132,14 +125,14 @@
                             </ul>
                         </section>
                     </div>
-                </section>
+                </div>
             </div>
 
-            </hr>
+            <hr/>
 
-            <footer class="text-center small">
+            <p class="text-center small">
                 © 2026 Volume — Tutti i diritti riservati
-            </footer>
+            </p>
         </div>
     </footer>
 

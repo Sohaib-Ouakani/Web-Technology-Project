@@ -1,8 +1,6 @@
 <div class="col-12 col-md-4 d-flex card-animate">
   <article class="p-4 rounded h-100 w-100 d-flex flex-column bg-secondary">
-    <header>
-      <p class="fw-bold fs-5 mb-2"><?= $element["Name"]; ?></p>
-    </header>
+    <h4 class="fw-bold fs-5 mb-2"><?= $element["Name"]; ?></h4>
 
     <p>Id: <?= $element["ID"] ?></p>
 
@@ -25,7 +23,7 @@
       <div class="ratio ratio-16x9">
         <img src="<?php echo UPLOAD_DIR.$element["ImagePath"]; ?>" 
           alt="<?php echo $element["Name"]; ?>"
-          class="object-fit-cover rounded mt-2">
+          class="object-fit-cover rounded mt-2"/>
       </div>
     </div>
   </article>

@@ -5,7 +5,7 @@ renderHero(
     "Da qui puoi gestire menu, ordini, utenti e tutti i dati della caffetteria. Seleziona una delle opzioni qui sotto per accedere alla sezione dedicata."
 );
 ?>
-<section class="py-4">
+<div class="py-4">
   <div class="row pt-4 g-4">
     <div class="col-12 col-md-4 d-flex admin-card">
       <a href="admin-orders-home.php" 
@@ -26,4 +26,4 @@ renderHero(
       </a>
     </div>
   </div>
-</section>
+</div>
