@@ -14,7 +14,7 @@ if($_POST["action"]==1){
     $dishid = htmlspecialchars($_POST["dishid"]);
     $dt = DateTime::createFromFormat('Y-m-d\TH:i', $_POST['datetime']);
     $orderdate = $dt->format('Y-m-d H:i:s');
-    $iscomplete = $_POST["iscomplete"];
+    $iscomplete = $_POST["iscomplete"] ?? false;
 
 
     $orderid = $dbh->insertOrderAdmin($dishid, $clientid, $orderdate, $iscomplete);
