@@ -34,7 +34,7 @@ if($_POST["action"]==2){
     $dishid = htmlspecialchars($_POST["dishid"]);
     $dt = DateTime::createFromFormat('Y-m-d\TH:i', $_POST['datetime']);
     $orderdate = $dt->format('Y-m-d H:i:s');
-    $iscomplete = $_POST["iscomplete"];
+    $iscomplete = $_POST["iscomplete"] ?? false;
 
     if ($dbh->updateOrder($orderid, $dishid, $clientid, $orderdate, $iscomplete)) {
         $msg = "Modifica completata correttamente!";
